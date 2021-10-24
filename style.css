@@ -1,0 +1,764 @@
+/* CSS for Landing Page */
+@font-face {
+  font-family: 'Checker';
+  src:  url('./assets/fonts/Remixed-NHadau-checker-2.otf');
+}
+
+@font-face {
+  font-family: 'hHalfFold';
+  src:  url('./assets/fonts/Remixed-NHadau-hHalfFold.otf');
+}
+
+@font-face {
+  font-family: 'quadFold';
+  src:  url('./assets/fonts/Remixed-NHadau-quadFold.otf');
+}
+
+@font-face {
+  font-family: 'triFold';
+  src:  url('./assets/fonts/Remixed-NHadau-triFold-2.otf');
+}
+
+@font-face {
+  font-family: 'vHalfFold';
+  src:  url('./assets/fonts/Remixed-NHadau-vHalfFold.otf');
+}
+
+@font-face {
+	font-family: 'NHaasGroteskDSPro-55Rg';
+	src: url('./assets/fonts/NHaasGroteskDSPro-55Rg.ttf');
+}
+
+html, body{
+	margin: 0;
+	height: 100%;
+}
+
+#text_checker{
+  /* background: yellow; */
+  width: 800px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+	font-size: 130pt;
+	font-family: 'hHalfFold';
+	animation: move 3s infinite;
+	/* Cant seem to troubleshoot the text animation not working on safari */
+	/* -webkit-animation-name: move;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: move;
+	-moz-animation-duration: 3s;
+	-moz-animation-iteration-count: infinite; */
+
+	position: absolute;
+	top: 38%;
+	bottom: 50%;
+	z-index: 2;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.banner {
+	position: fixed;
+	margin-bottom: 28px;
+	bottom: 0;
+	width: 100%;
+	height: 15px;
+	font-family: 'NHaasGroteskDSPro-55Rg';
+	font-size: 30pt;
+	color: white;
+}
+
+.container {  
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+  
+.box {
+  border: 180px solid black;
+  height: 390px;
+  width: 390px;
+  position: absolute;
+  -webkit-filter: blur(45px);
+  border-radius: 700px;
+}
+
+
+@keyframes move{
+	0% {
+		font-family: 'Checker';
+	}
+	25% {
+		font-family: 'hHalfFold';
+	}
+	50% {
+		font-family: 'triFold';
+	}
+	75% {
+		font-family: 'vHalfFold';
+	}
+	100% {
+		font-family: 'quadFold';
+	}
+}
+/* Safari still doesnt work with -webkit- */
+/* @-webkit-keyframes move {
+    0% {
+		font-family: 'Checker';
+	}
+	25% {
+		font-family: 'hHalfFold';
+	}
+	50% {
+		font-family: 'triFold';
+	}
+	75% {
+		font-family: 'vHalfFold';
+	}
+	100% {
+		font-family: 'quadFold';
+	}
+}
+
+@-moz-keyframes move {
+    0% {
+		font-family: 'Checker';
+	}
+	25% {
+		font-family: 'hHalfFold';
+	}
+	50% {
+		font-family: 'triFold';
+	}
+	75% {
+		font-family: 'vHalfFold';
+	}
+	100% {
+		font-family: 'quadFold';
+	}
+} */
+
+/* JJ's CSS Starts Here */
+
+body {
+  margin: 0;
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+div {
+  position: absolute;
+  display: inline-block;
+
+}
+
+@-webkit-keyframes example {
+  from {
+    -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@-moz-keyframes example {
+  from {
+    -moz-transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@-o-keyframes example {
+  from {
+    -o-transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    -o-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes example {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+#artwork {
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+#artwork:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+img {
+  width: 100%;
+}
+
+#statement {
+  position: absolute;
+  z-index: -1;
+  font-size: 80pt;
+  line-height: 105%;
+  padding: 3%;
+}
+
+#shuffle {
+  z-index: 3;
+  background: rgba(0, 0, 0, 1);
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 30pt;
+  line-height: 200px;
+  font-style: italic;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.info {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .5s, visibility .5s;
+}
+
+p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  padding: 5%;
+  word-wrap: break-word;
+}
+
+.artist {
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.title {
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.description {
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#art1:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art2:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art3:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art4:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art5:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art6:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art7:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art8:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art9:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art10:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art11:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art12:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art13:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art14:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art15:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art16:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art17:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art18:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art19:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art20:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art21:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art22:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art23:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art24:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art25:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art26:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art27:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art28:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art29:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art30:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art31:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art32:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art33:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art34:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art35:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art36:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art37:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art38:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art39:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art40:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art41:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art42:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art43:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art44:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art45:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art46:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art47:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #art48:hover .info {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  #art1:hover {
+    z-index: 2;
+
+  }
+
+  #art2:hover {
+    z-index: 2;
+  }
+
+  #art3:hover {
+    z-index: 2;
+  }
+
+  #art4:hover {
+    z-index: 2;
+  }
+
+  #art5:hover {
+    z-index: 2;
+  }
+
+  #art6:hover {
+    z-index: 2;
+  }
+
+  #art7:hover {
+    z-index: 2;
+  }
+
+  #art8:hover {
+    z-index: 2;
+  }
+
+  #art9:hover {
+    z-index: 2;
+  }
+
+  #art10:hover {
+    z-index: 2;
+  }
+
+  #art11:hover {
+    z-index: 2;
+  }
+
+  #art12:hover {
+    z-index: 2;
+  }
+
+  #art13:hover {
+    z-index: 2;
+  }
+
+  #art14:hover {
+    z-index: 2;
+  }
+
+  #art15:hover {
+    z-index: 2;
+  }
+
+  #art16:hover {
+    z-index: 2;
+  }
+
+  #art17:hover {
+    z-index: 2;
+  }
+
+  #art18:hover {
+    z-index: 2;
+  }
+
+  #art19:hover {
+    z-index: 2;
+  }
+
+  #art20:hover {
+    z-index: 2;
+  }
+
+  #art21:hover {
+    z-index: 2;
+  }
+
+  #art22:hover {
+    z-index: 2;
+  }
+
+  #art23:hover {
+    z-index: 2;
+  }
+
+  #art24:hover {
+    z-index: 2;
+  }
+
+  #art25:hover {
+    z-index: 2;
+  }
+
+  #art26:hover {
+    z-index: 2;
+  }
+
+  #art27:hover {
+    z-index: 2;
+  }
+
+  #art28:hover {
+    z-index: 2;
+  }
+
+  #art29:hover {
+    z-index: 2;
+  }
+
+  #art30:hover {
+    z-index: 2;
+  }
+
+  #art31:hover {
+    z-index: 2;
+  }
+
+  #art32:hover {
+    z-index: 2;
+  }
+
+  #art33:hover {
+    z-index: 2;
+  }
+
+  #art34:hover {
+    z-index: 2;
+  }
+
+  #art35:hover {
+    z-index: 2;
+  }
+
+  #art36:hover {
+    z-index: 2;
+  }
+
+  #art37:hover {
+    z-index: 2;
+  }
+
+  #art38:hover {
+    z-index: 2;
+  }
+
+  #art39:hover {
+    z-index: 2;
+  }
+
+  #art40:hover {
+    z-index: 2;
+  }
+
+  #art41:hover {
+    z-index: 2;
+  }
+
+  #art42:hover {
+    z-index: 2;
+  }
+
+  #art43:hover {
+    z-index: 2;
+  }
+
+  #art44:hover {
+    z-index: 2;
+  }
+
+  #art45:hover {
+    z-index: 2;
+  }
+
+  #art46:hover {
+    z-index: 2;
+  }
+
+  #art47:hover {
+    z-index: 2;
+  }
+
+  #art48:hover {
+    z-index: 2;
+  }
