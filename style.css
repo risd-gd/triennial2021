@@ -79,6 +79,7 @@ a{
 	align-items: center;
 	justify-content: center;
   margin: auto;
+  z-index: 1;
 
 }
   
@@ -91,6 +92,7 @@ a{
   -webkit-filter: blur(45px);
   transform: scale(1.1); 
   border-radius: 700px;
+  z-index: 2;
  
 }
 
