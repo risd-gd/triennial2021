@@ -1,14 +1,378 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+  <head>
 <meta charset="utf-8" />
 <title>GD Triennial</title>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="https://use.typekit.net/doc4ike.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallerystyle.css">
+<style>
+  body {
+    margin: 0;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
+  div {
+    position: absolute;
+    display: inline-block;
+  }
+
+  #retrospection {
+    animation-name: retrospection;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+
+  #retrospection:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  @-webkit-keyframes retrospection {
+    from {
+      -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+  @-moz-keyframes retrospection {
+    from {
+      -moz-transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+  @-o-keyframes retrospection {
+    from {
+      -o-transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      -o-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+  @keyframes retrospection {
+    from {
+      transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+  #speculation {
+    animation-name: speculation;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+  }
+
+  #speculation:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  @-webkit-keyframes speculation {
+    from {
+      -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(-360deg) translateX(150px) rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes speculation {
+    from {
+      -moz-transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      -moz-transform: rotate(-360deg) translateX(150px) rotate(360deg);
+    }
+  }
+
+  @-o-keyframes speculation {
+    from {
+      -o-transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      -o-transform: rotate(-360deg) translateX(150px) rotate(360deg);
+    }
+  }
+
+  @keyframes speculation {
+    from {
+      transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg) translateX(150px) rotate(360deg);
+    }
+  }
+
+  #activation {
+    animation-name: activation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  #activation:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  @-webkit-keyframes activation {
+    from {
+      -webkit-transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(-360deg) translateX(-150px) rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes activation {
+    from {
+      -moz-transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      -moz-transform: rotate(-360deg) translateX(-150px) rotate(360deg);
+    }
+  }
+
+  @-o-keyframes activation {
+    from {
+      -o-transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      -o-transform: rotate(-360deg) translateX(-150px) rotate(360deg);
+    }
+  }
+
+  @keyframes activation {
+    from {
+      transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg) translateX(-150px) rotate(360deg);
+    }
+  }
+
+  #connection {
+    animation-name: connection;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+  }
+
+  #connection:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  @-webkit-keyframes connection {
+    from {
+      -webkit-transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(360deg) translateX(-150px) rotate(-360deg);
+    }
+  }
+
+  @-moz-keyframes connection {
+    from {
+      -moz-transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      -moz-transform: rotate(360deg) translateX(-150px) rotate(-360deg);
+    }
+  }
+
+  @-o-keyframes connection {
+    from {
+      -o-transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      -o-transform: rotate(360deg) translateX(-150px) rotate(-360deg);
+    }
+  }
+
+  @keyframes connection {
+    from {
+      transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg) translateX(-150px) rotate(-360deg);
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #statement {
+    position: absolute;
+    z-index: -1;
+    font-size: 80pt;
+    line-height: 105%;
+    padding: 3%;
+  }
+
+  #shuffle {
+    z-index: 3;
+    background: #DCFF00;
+    width: 100px;
+    height: 100px;
+    color: #AAAAA9;
+    font-size: 18pt;
+    line-height: 100px;
+    font-style: italic;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #room1 {
+    z-index: 3;
+    background: rgba(0, 0, 0, 1);
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-size: 18pt;
+    line-height: 100px;
+    font-style: italic;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #room2 {
+    z-index: 3;
+    background: rgba(0, 0, 0, 1);
+    width: 200px;
+    height: 100px;
+    color:white;
+    font-size: 18pt;
+    line-height: 100px;
+    font-style: italic;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #room3 {
+    z-index: 3;
+    background: rgba(0, 0, 0, 1);
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-size: 18pt;
+    line-height: 100px;
+    font-style: italic;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #room4 {
+    z-index: 3;
+    background: rgba(0, 0, 0, 1);
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-size: 18pt;
+    line-height: 100px;
+    font-style: italic;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .info {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 1);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+
+    /* transition effect. not necessary */
+    transition: opacity .5s, visibility .5s;
+  }
+
+  p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    padding: 5%;
+    word-wrap: break-word;
+  }
+
+  .artist {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .title {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .description {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* #### Mobile Phones Portrait #### */
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+    #statement {
+      font-size: 52pt;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      word-wrap: break-word;
+    }
+  }
+</style>
+</head>
 <body>
-  <div id="statement"><span style="font-style: italic;">A passage, a window, an entrance, an exit, a threshold,
+  <div id="statement"><span style="font-style: italic;">A passage, a window, an entrance, an
+      exit, a threshold,
       a transition</span>: it is through these
     portals that the RISD community experienced the past three years. We moved between
     physical and virtual spaces, projected ours and others’ voices throughout nationwide
@@ -19,21 +383,20 @@
     public/private blurred together.
     The 2021 GD Triennial is an exhibit of works produced within RISD’s Graphic Design
     Department over the last three years, as they sit at the intersections of disciplines,
-    visions, and practices. Portals enable both transportation and transformation—
-    as visual communicators, we open portals into new ways of disrupting
+    visions, and practices. Portals enable both transportation and transformation—as visual communicators, we open portals into new ways of disrupting
     and educating. And as we travel through and across portals—from a
     volatile past towards a hazy, but hopeful, future—we must embrace the
     uncertain, constantly iterative process of that transition. Against a
     background of profound social, technological, and ecological change,
     our recent efforts have created new portals and our continued vigor
-    and vigilance will ensure they remain open. <span style="font-style: italic">This exhibition is a
+    and vigilance will ensure they remain open. <span style="font-style: italic;">This exhibition is a
       testament to the ever-evolving state of design and its endless
       potential: a pathway to the many worlds we’ve been to before
       and a portal to the infinite places we will eventually go.</span></div>
-  <div id="artwork">
-
+  <div id="retrospection">
+    <a href="retrospection.html"><div id ="room1">Retrospection</div></a>
     <div id="art1">
-      <img id="pic1" src="./assets/images/1.jpg">
+      <img id="pic1" src="retrospection/AkotoJada_ButLook_400.jpg">
 
       <p>
         <span class="artist">Artist</span>
@@ -46,7 +409,7 @@
       </p>
 
     </div>
-    <div id="art2"><img id="pic2" src="./assets/images/2.jpg">
+    <div id="art2"><img id="pic2" src="retrospection/AnanyaScindia_Splash_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -56,7 +419,7 @@
         <br>
       </p>
     </div>
-    <div id="art3"><img id="pic3" src="./assets/images/3.jpg">
+    <div id="art3"><img id="pic3" src="retrospection/AstlesCameron_NotesonHejira_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -66,7 +429,7 @@
         <br>
       </p>
     </div>
-    <div id="art4"><img id="pic4" src="./assets/images/4.jpg">
+    <div id="art4"><img id="pic4" src="retrospection/AvilaOllantay_MiMadre_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -76,7 +439,7 @@
         <br>
       </p>
     </div>
-    <div id="art5"><img id="pic5" src="./assets/images/5.jpg">
+    <div id="art5"><img id="pic5" src="retrospection/DeCiccoGianamarie_Aftermath_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -86,7 +449,7 @@
         <br>
       </p>
     </div>
-    <div id="art6"><img id="pic6" src="./assets/images/6.jpg">
+    <div id="art6"><img id="pic6" src="retrospection/GovindaRaoAnmol_JosefMüller-Brockmann_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -96,7 +459,7 @@
         <br>
       </p>
     </div>
-    <div id="art7"><img id="pic7" src="./assets/images/7.jpg">
+    <div id="art7"><img id="pic7" src="retrospection/HsiaoRyan_timeVibedistimeWellSpentVol1_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -106,7 +469,7 @@
         <br>
       </p>
     </div>
-    <div id="art8"><img id="pic8" src="./assets/images/8.jpg">
+    <div id="art8"><img id="pic8" src="retrospection/IanKeliher_Atlas_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -116,7 +479,7 @@
         <br>
       </p>
     </div>
-    <div id="art9"><img id="pic9" src="./assets/images/9.jpg">
+    <div id="art9"><img id="pic9" src="retrospection/JianJie_AnIntroToBoys_LoveVisualNovels_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -126,7 +489,7 @@
         <br>
       </p>
     </div>
-    <div id="art10"><img id="pic10" src="./assets/images/10.jpg">
+    <div id="art10"><img id="pic10" src="retrospection/JianJie_MicrosoftSpiderSolitaire_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -136,7 +499,7 @@
         <br>
       </p>
     </div>
-    <div id="art11"><img id="pic11" src="./assets/images/11.jpg">
+    <div id="art11"><img id="pic11" src="retrospection/JianJie_VitaLemonTea_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -146,7 +509,7 @@
         <br>
       </p>
     </div>
-    <div id="art12"><img id="pic12" src="./assets/images/12.jpg">
+    <div id="art12"><img id="pic12" src="retrospection/JiYingxi_IndustryPark_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -156,7 +519,7 @@
         <br>
       </p>
     </div>
-    <div id="art13"><img id="pic13" src="./assets/images/13.jpg">
+    <div id="art13"><img id="pic13" src="retrospection/KhangJanice_HappyPlace_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -166,7 +529,7 @@
         <br>
       </p>
     </div>
-    <div id="art14"><img id="pic14" src="./assets/images/14.jpg">
+    <div id="art14"><img id="pic14" src="retrospection/KimMina_SewerMuseum_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -176,7 +539,7 @@
         <br>
       </p>
     </div>
-    <div id="art15"><img id="pic15" src="./assets/images/15.jpg">
+    <div id="art15"><img id="pic15" src="retrospection/LarsonNick_somethingperhaps_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -186,7 +549,7 @@
         <br>
       </p>
     </div>
-    <div id="art16"><img id="pic16" src="./assets/images/16.jpg">
+    <div id="art16"><img id="pic16" src="retrospection/LeeBryson_GateSide_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -196,7 +559,7 @@
         <br>
       </p>
     </div>
-    <div id="art17"><img id="pic17" src="./assets/images/17.jpg">
+    <div id="art17"><img id="pic17" src="retrospection/LeeHyelim_Dadaland_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -206,7 +569,7 @@
         <br>
       </p>
     </div>
-    <div id="art18"><img id="pic18" src="./assets/images/18.jpg">
+    <div id="art18"><img id="pic18" src="retrospection/LimYoujin_GoesRound_Round_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -216,7 +579,7 @@
         <br>
       </p>
     </div>
-    <div id="art19"><img id="pic19" src="./assets/images/19.jpg">
+    <div id="art19"><img id="pic19" src="retrospection/LimYoujin_Goingbacktothe19thcentury_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -226,7 +589,7 @@
         <br>
       </p>
     </div>
-    <div id="art20"><img id="pic20" src="./assets/images/20.jpg">
+    <div id="art20"><img id="pic20" src="retrospection/LiuYutong_Anthropomorphism_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -236,7 +599,7 @@
         <br>
       </p>
     </div>
-    <div id="art21"><img id="pic21" src="./assets/images/21.jpg">
+    <div id="art21"><img id="pic21" src="retrospection/LonyayMoritz_IndigoBook_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -246,7 +609,7 @@
         <br>
       </p>
     </div>
-    <div id="art22"><img id="pic22" src="./assets/images/22.jpg">
+    <div id="art22"><img id="pic22" src="retrospection/MankunGuo_FanTaiSui_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -256,7 +619,7 @@
         <br>
       </p>
     </div>
-    <div id="art23"><img id="pic23" src="./assets/images/23.jpg">
+    <div id="art23"><img id="pic23" src="retrospection/MuhaddisaAli_MappingMemory_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -266,7 +629,7 @@
         <br>
       </p>
     </div>
-    <div id="art24"><img id="pic24" src="./assets/images/24.jpg">
+    <div id="art24"><img id="pic24" src="retrospection/NishthaNanda_EmpoweredTimeline_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -276,7 +639,7 @@
         <br>
       </p>
     </div>
-    <div id="art25"><img id="pic25" src="./assets/images/25.jpg">
+    <div id="art25"><img id="pic25" src="retrospection/NoelEmma_TwoDesignerTimeline_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -286,7 +649,7 @@
         <br>
       </p>
     </div>
-    <div id="art26"><img id="pic26" src="./assets/images/26.jpg">
+    <div id="art26"><img id="pic26" src="retrospection/PerkinsJessica_AfterJudd_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -296,7 +659,7 @@
         <br>
       </p>
     </div>
-    <div id="art27"><img id="pic27" src="./assets/images/27.jpg">
+    <div id="art27"><img id="pic27" src="retrospection/PerkinsJessica_APlacetoCallHome_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -306,7 +669,7 @@
         <br>
       </p>
     </div>
-    <div id="art28"><img id="pic28" src="./assets/images/28.jpg">
+    <div id="art28"><img id="pic28" src="retrospection/PerkinsJessica_SettingType_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -316,7 +679,7 @@
         <br>
       </p>
     </div>
-    <div id="art29"><img id="pic29" src="./assets/images/29.jpg">
+    <div id="art29"><img id="pic29" src="retrospection/RomanErin_TwomblyPoster_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -326,7 +689,7 @@
         <br>
       </p>
     </div>
-    <div id="art30"><img id="pic30" src="./assets/images/30.jpg">
+    <div id="art30"><img id="pic30" src="retrospection/RyanEleanor_Doorways_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -336,7 +699,7 @@
         <br>
       </p>
     </div>
-    <div id="art31"><img id="pic31" src="./assets/images/31.jpg">
+    <div id="art31"><img id="pic31" src="retrospection/SarkissianAlex_17Hrs_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -346,7 +709,7 @@
         <br>
       </p>
     </div>
-    <div id="art32"><img id="pic32" src="./assets/images/32.jpg">
+    <div id="art32"><img id="pic32" src="retrospection/SarkissianAlex_TheDollyPartonAntibody_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -356,7 +719,7 @@
         <br>
       </p>
     </div>
-    <div id="art33"><img id="pic33" src="./assets/images/33.jpg">
+    <div id="art33"><img id="pic33" src="retrospection/TanBojun_01_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -366,7 +729,7 @@
         <br>
       </p>
     </div>
-    <div id="art34"><img id="pic34" src="./assets/images/34.jpg">
+    <div id="art34"><img id="pic34" src="retrospection/XieIris_Ode_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -376,7 +739,7 @@
         <br>
       </p>
     </div>
-    <div id="art35"><img id="pic35" src="./assets/images/35.jpg">
+    <div id="art35"><img id="pic35" src="retrospection/YangRainRuihua_RenderingandDesign_400.jpg">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -386,7 +749,7 @@
         <br>
       </p>
     </div>
-    <div id="art36"><img id="pic36" src="./assets/images/36.jpg">
+    <div id="art36"><img id="pic36" src="retrospection/YangSaelin_MomentPoster_400.png">
       <p>
         <span class="artist">Artist</span>
         <br>
@@ -396,130 +759,1082 @@
         <br>
       </p>
     </div>
-    <div id="art37"><img id="pic37" src="./assets/images/37.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art38"><img id="pic38" src="./assets/images/38.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art39"><img id="pic39" src="./assets/images/39.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art40"><img id="pic40" src="./assets/images/40.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art41"><img id="pic41" src="./assets/images/41.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art42"><img id="pic42" src="./assets/images/42.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art43"><img id="pic43" src="./assets/images/43.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art44"><img id="pic44" src="./assets/images/44.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art45"><img id="pic45" src="./assets/images/45.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art46"><img id="pic46" src="./assets/images/46.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art47"><img id="pic47" src="./assets/images/47.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="art48"><img id="pic48" src="./assets/images/48.jpg">
-      <p>
-        <span class="artist">Artist</span>
-        <br>
-        <span class="title">Title</span>
-        <br>
-        <span class="description">Description</span>
-        <br>
-      </p>
-    </div>
-    <div id="shuffle" onclick="shuffle()">Teleport</div>
+    
   </div>
+  <div id="speculation">
+    <div id ="room2">Speculation</div>
+    <div id="art37"><img id="pic37" src="speculation/AnChaeeun_BiomimicryAlphabet_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art38"><img id="pic38" src="speculation/DengSharlene_GroovyCarAnimation_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art39"><img id="pic39" src="speculation/DengSharlene_SurrealLandscape_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art40"><img id="pic40" src="speculation/FukawaMonet_BreedingShapesAlphabet_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art41"><img id="pic41" src="speculation/FumertonLiuLian_OrangePeelGlyphs_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art42"><img id="pic42" src="speculation/HanadaMizuki_FestivalShinkai_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art43"><img id="pic43" src="speculation/HanEJoon_ElliesPostcard_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art44"><img id="pic44" src="speculation/HoJoyce_poeticsofInterruption_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art45"><img id="pic45" src="speculation/KimJin_TheGardenParty_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art46"><img id="pic46" src="speculation/KimKyoungHoon_EverytimeWeDealWithEnemyWeCreateTwoMore_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art47"><img id="pic47" src="speculation/LarkinEthan_GenerativeAlphabet_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art48"><img id="pic48" src="speculation/LiXubai_AdditiveType_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art49"><img id="pic49" src="speculation/LouisRakovich_Breathing_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art50"><img id="pic50" src="speculation/MehtaVarun_AvaniPoster_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art51"><img id="pic51" src="speculation/MehtaVarun_TheIsolationHelm_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art52"><img id="pic52" src="speculation/MillerRuby_BeachHouse_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art53"><img id="pic53" src="speculation/PerkinsJessica_OneWarmDay_1500.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art54"><img id="pic54" src="speculation/SarkissianAlex_HowToStayinTouch_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art55"><img id="pic55" src="speculation/ShyngyssovaTomiris_EdiblePoster_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art56"><img id="pic56" src="speculation/TanBojun_SheisFree_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art57"><img id="pic57" src="speculation/UtkanDoraOncul_HowToExerciseinaWorldwidePandemic_1500.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art58"><img id="pic58" src="speculation/WangTianqi_WhatWeSeeWhenWeRead_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art59"><img id="pic59" src="speculation/WisorHope_PodfaceTypeComposition_400.gif">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art60"><img id="pic60" src="speculation/WuCatherine_同志廟會_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art61"><img id="pic61" src="speculation/XieIris_Predestination_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art62"><img id="pic62" src="speculation/YangRuihua_KWRL_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art63"><img id="pic63" src="speculation/YeeNicole_MFS2_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art64"><img id="pic64" src="speculation/YuchiNina_CIB_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    
+  </div>
+  <div id="activation">
+    
+    <div id="art65"><img id="pic65" src="activation/AbassShani_ModernMedicine_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art66"><img id="pic66" src="activation/AgarwalMalvika_Fluent_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art67"><img id="pic67" src="activation/BojunTan_LookingAtYou_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art68"><img id="pic68" src="activation/DingSiwu_HowToBeAGoodEgg_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art69"><img id="pic69" src="activation/DingSiwu_MadeInChinaEmbroidery_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art70"><img id="pic70" src="activation/DoraOnculUtkan_DS3Map_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art71"><img id="pic71" src="activation/DoraOnculUtkan_MoreMore_MoreChocolate_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art72"><img id="pic72" src="activation/EspañaXiomara_Latinalore_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art73"><img id="pic73" src="activation/FarrellPatrick_LandmarkPoster_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art74"><img id="pic74" src="activation/FeinAdam_PoliticsOfNonRepresentation_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art75"><img id="pic75" src="activation/FeinAdam_TimesNeutralRoman_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art76"><img id="pic76" src="activation/ForoughAbadian_Untitled_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art77"><img id="pic77" src="activation/FukawaMonet_TimetoGoChokeSomeTurtles_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art78"><img id="pic78" src="activation/GomezIngrid_PainandPride_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art79"><img id="pic79" src="activation/GovindaRaoAnmol_AJourney_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art80"><img id="pic80" src="activation/GuoZengqi_WhatIsItLikeToBeAFiber_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art81"><img id="pic81" src="activation/HuangAnita_robocalypse_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art82"><img id="pic82" src="activation/JayamahaSamaaya_rickytick_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art83"><img id="pic83" src="activation/JayamahaSamaaya_transitionascurrency_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art84"><img id="pic84" src="activation/JingyuFeng_JinganTemple_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art85"><img id="pic85" src="activation/JungYuJung_HiddenStoriesBehind_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art86"><img id="pic86" src="activation/JuQiwen_StopAsianHate_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art87"><img id="pic87" src="activation/KosakaMio_のコピー_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art88"><img id="pic88" src="activation/LarsonNick_admanadmanadmanadmanadmanadmanadman_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art89"><img id="pic89" src="activation/MolestinaAlejandro_DesireLines_400.gif">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art90"><img id="pic90" src="activation/MuhaddisaAli_BOL_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art91"><img id="pic91" src="activation/MurakamiEthan_CrossingLinesConstructingHome_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art92"><img id="pic92" src="activation/MurakamiEthan_IFoundMyselfina_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art93"><img id="pic93" src="activation/NandaNishta_SpeakEnglish_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art94"><img id="pic94" src="activation/ParkCatherine_ReconciliationScroll_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art95"><img id="pic95" src="activation/VarunMehta_DontTellMeHowToSayMyName_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art96"><img id="pic96" src="activation/WangShuixin_WomensPlight_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art97"><img id="pic97" src="activation/WangTianqi_AttentionWater_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art98"><img id="pic98" src="activation/WarshawMadeline_InterviewEditorial_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art99"><img id="pic99" src="activation/WisorHope_XXProject_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art100"><img id="pic100" src="activation/YangAmanda_NothingOutsideOfTheText_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art101"><img id="pic101" src="activation/YaseminSarihan_EthicalLeaking_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art102"><img id="pic102" src="activation/YuchiNina_Fan_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id ="room3">Activation</div>
 
+  </div>
+  <div id="connection">
+    
+    <div id="art103"><img id="pic103" src="connection/AbascalGabriel_IAndLoveYou_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art104"><img id="pic104" src="connection/Alexis_Seams_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art105"><img id="pic105" src="connection/ChaoWendy_KnollResearchLibraryConceptPosters_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art106"><img id="pic106" src="connection/ChodoshLydia_i,and_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art107"><img id="pic107" src="connection/ChoIris_MeltingPoster_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art108"><img id="pic108" src="connection/ChoIris_P_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art109"><img id="pic109" src="connection/DengSharlene_DojaCatPoster_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art110"><img id="pic110" src="connection/DrozdovGabriel_Event_1500.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art111"><img id="pic111" src="connection/GovindaRaoAnmol_BiodiversityInfographic_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art112"><img id="pic112" src="connection/HeldKira_Confetti_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art113"><img id="pic113" src="connection/KohChristine_BackToAnalog_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art114"><img id="pic114" src="connection/KrohnNate_OrangeFences_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art115"><img id="pic115" src="connection/LarkinEthan_MotionPoster_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art116"><img id="pic116" src="connection/LeeBryson_GardenLabryrinth_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art117"><img id="pic117" src="connection/LeeHwan_ILikePosters_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art118"><img id="pic118" src="connection/LeeHyelim_DuBoisinfographics_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art119"><img id="pic119" src="connection/LeeSunHo_Sparkle_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art120"><img id="pic120" src="connection/LimYoujin_NYsubway_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art121"><img id="pic121" src="connection/ManmeetSodhi_APlanetedSeed_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art122"><img id="pic122" src="connection/MillerRuby_UselessOrgans_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art123"><img id="pic123" src="connection/MillterRuby_diptych_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art124"><img id="pic124" src="connection/MuhaddisaAli_12collages_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art125"><img id="pic125" src="connection/NickLarson_Idi-O-Matic_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art126"><img id="pic126" src="connection/NoelEmma_WhatsRISDWearin_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art127"><img id="pic127" src="connection/RomanErin_TheCollection_1500.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art128"><img id="pic128" src="connection/RonceyAdele_Creativite_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art129"><img id="pic129" src="connection/RonceyAdele_Inks_1500.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art130"><img id="pic130" src="connection/RyanEleanor_Nook_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art131"><img id="pic131" src="connection/SarkissianAlex_Reframing_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art132"><img id="pic132" src="connection/ShawAvery_DrivingInProvidence_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art133"><img id="pic133" src="connection/SongJieun_MyCollection_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art134"><img id="pic134" src="connection/UtkanDoraOncul_DSC09666_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art135"><img id="pic135" src="connection/UtkanDoraOncul_DSC09794_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art136"><img id="pic136" src="connection/WangTianqi_Insomnia_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art137"><img id="pic137" src="connection/XieIris_digsouv_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art138"><img id="pic138" src="connection/YangRainRuihua_TravelingGrooves_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art139"><img id="pic139" src="connection/YaoJeff_ForminMotion_400.png">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art140"><img id="pic140" src="connection/YaoJeff_StillLifeandSelfPortrait_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art141"><img id="pic141" src="connection/YuchiNina_HappyBirthday_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id="art142"><img id="pic142" src="connection/YunErica_UgliesPosterSeries_400.jpg">
+      <p>
+        <span class="artist">Artist</span>
+        <br>
+        <span class="title">Title</span>
+        <br>
+        <span class="description">Description</span>
+        <br>
+      </p>
+    </div>
+    <div id ="room4">Connection</div>
+    <div id="shuffle" onclick="shuffle()">shuffle</div>
+  </div>
 </body>
-<script src="script_projectspage.js" type="text/javascript"></script>
-
+<script src="gallery.js" type="text/javascript"></script>
 </html>
