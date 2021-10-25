@@ -28,5 +28,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+var x = 0 
+
+setInterval(function changeClass(){ 
+  x = x + 1 
+
+  if (x == 0){
+    document.getElementById('textchecker').style.fontFamily = 'hHalfFold'
+    console.log("change1")
+  }
+
+  if (x == 1){
+    document.getElementById('textchecker').style.fontFamily = 'quadFold'
+    console.log("change2")
+  }
+
+  if (x == 2){
+    document.getElementById('textchecker').style.fontFamily = 'triFold'
+    console.log("change3")
+  }
+
+  if (x == 3){
+    document.getElementById('textchecker').style.fontFamily = 'vHalfFold'
+    console.log("change3")
+  }
+
+  if (x == 4){
+    document.getElementById('textchecker').style.fontFamily = 'Checker'
+    console.log("change3")
+  }
+
+  if (x>4){
+    x = 0
+  }
+
+}, 500);
+
 
 

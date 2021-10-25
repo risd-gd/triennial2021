@@ -31,32 +31,32 @@
 
 html, body{
 	margin: 0;
-	height: 100%;
+  height: 100%;
+
 }
 
-#text_checker{
-  /* background: yellow; */
+
+.headline{
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  font-style: normal;
+}
+
+#textchecker{
   width: 800px;
   left: 0; 
   right: 0; 
   margin-left: auto; 
   margin-right: auto; 
-	font-size: 130pt;
-	font-family: 'hHalfFold';
-	animation: move 3s infinite;
-	/* Cant seem to troubleshoot the text animation not working on safari */
-	/* -webkit-animation-name: move;
-	-webkit-animation-duration: 3s;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-name: move;
-	-moz-animation-duration: 3s;
-	-moz-animation-iteration-count: infinite; */
-
+  font-size: 130pt;
+  font-family: 'Checker';
 	position: absolute;
 	top: 38%;
 	bottom: 50%;
 	z-index: 2;
 }
+
 a{
   text-decoration: none;
   color: black;
@@ -78,7 +78,8 @@ a{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: auto;
+  margin: auto;
+
 }
   
 .box {
@@ -86,66 +87,13 @@ a{
   height: 390px;
   width: 390px;
   position: absolute;
+  filter: blur(45px);
   -webkit-filter: blur(45px);
+  transform: scale(1.1); 
   border-radius: 700px;
+ 
 }
 
-
-@keyframes move{
-	0% {
-		font-family: 'Checker';
-	}
-	25% {
-		font-family: 'hHalfFold';
-	}
-	50% {
-		font-family: 'triFold';
-	}
-	75% {
-		font-family: 'vHalfFold';
-	}
-	100% {
-		font-family: 'quadFold';
-	}
-}
-/* Safari still doesnt work with -webkit- */
-/* @-webkit-keyframes move {
-    0% {
-		font-family: 'Checker';
-	}
-	25% {
-		font-family: 'hHalfFold';
-	}
-	50% {
-		font-family: 'triFold';
-	}
-	75% {
-		font-family: 'vHalfFold';
-	}
-	100% {
-		font-family: 'quadFold';
-	}
-}
-
-@-moz-keyframes move {
-    0% {
-		font-family: 'Checker';
-	}
-	25% {
-		font-family: 'hHalfFold';
-	}
-	50% {
-		font-family: 'triFold';
-	}
-	75% {
-		font-family: 'vHalfFold';
-	}
-	100% {
-		font-family: 'quadFold';
-	}
-} */
-
-/* JJ's CSS Starts Here */
 
 body {
   margin: 0;
@@ -250,7 +198,6 @@ img {
   visibility: hidden;
   opacity: 0;
 
-  /* transition effect. not necessary */
   transition: opacity .5s, visibility .5s;
 }
 
@@ -280,6 +227,8 @@ p {
   font-weight: 400;
   font-style: normal;
 }
+
+
 
 #art1:hover .info {
     z-index: 2;
