@@ -745,3 +745,15 @@ p {
   #art48:hover {
     z-index: 2;
   }
+
+@media screen and (min-width: 600px) {
+  div.textchecker {
+    font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.textchecker {
+    font-size: 50px;
+  }
+}
