@@ -747,13 +747,13 @@ p {
   }
 
 @media screen and (min-width: 600px) {
-  div.textchecker {
+  #textchecker {
     font-size: 34px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  div.textchecker {
+  #textchecker {
     font-size: 50px;
   }
 }
