@@ -43,18 +43,20 @@ html, body{
   font-size: 50px;
   font-style: normal;
 }
-
+.checkercontainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
 #textchecker{
-  width: 800px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  font-size: 130pt;
+  font-size: 21vw;
   font-family: 'Checker';
 	position: fixed;
-	top: 38%;
 	z-index: 2;
+  text-align: center;
 }
 
 .subtitle{
@@ -78,10 +80,9 @@ a{
 }
 .banner {
 	position: fixed;
-	margin-bottom: 28px;
 	bottom: 0;
 	width: 100%;
-	height: 15px;
+  height: 45px;
 	font-family: 'NHaasGroteskDSPro-55Rg';
 	font-size: 30pt;
 	color: white;
@@ -94,22 +95,35 @@ a{
 	align-items: center;
 	justify-content: center;
   margin: auto;
-  z-index: 1;
-
 }
   
 .box {
   opacity: 1;
-  border: 200px solid rgb(178, 191, 200);
-  height: 400px;
-  width: 400px;
+  border: 20vw solid #b7ceda;
+  box-shadow: inset #E0E5E9 0 0 0 50px;
+  height: 50vw;
+  width: 53vw;
   position: absolute;
   filter: blur(45px);
   -webkit-filter: blur(45px);
-  transform: scale(1.1); 
-  border-radius: 700px;
+  border-radius: 100vw;
   z-index: 2;
- 
+  animation: animated-border 4s infinite;
+}
+
+@keyframes animated-border {
+  0% {
+    border-color: #B1BFC8;;
+    box-shadow: inset #E0E5E9 0 0 0 50px;
+  }
+  50% {
+    border-color: #E0E5E9;;
+    box-shadow:inset #B1BFC8 0 0 0 50px;
+  }
+  100% {
+    border-color: #B1BFC8;;
+    box-shadow:inset #E0E5E9 0 0 0 50px;
+  }
 }
 
 

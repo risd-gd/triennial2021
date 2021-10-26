@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-  let constrain =3500;
+  let constrain;
+  var intervalId = window.setInterval(function(){
+    if (window.innerWidth < 1281) { 
+      constrain = 3500 
+    } else if (window.innerWidth < 1500) { 
+      constrain = 8000
+    } else if (window.innerWidth < 1900) {
+      constrain = 12000
+    } else {
+      constrain = 20000;
+    };
+    // console.log(constrain + 'and' + window.innerWidth);
+  }, 1000);
+  
   let mouseOverContainer = document.getElementById("ex1");
   let ex1Layer = document.getElementById("ex1-layer");
 
