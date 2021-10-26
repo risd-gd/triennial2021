@@ -746,9 +746,9 @@ p {
     z-index: 2;
   }
 
-@media screen and (min-width: 600px) {
+/*@media screen and (min-width: 600px) {
   #textchecker {
-    font-size: 34pt;
+    font-size: 36pt;
   }
   span{
     font-size: 36pt;
