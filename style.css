@@ -52,7 +52,7 @@ html, body{
   pointer-events: none;
 }
 #textchecker{
-  font-size: 21vw;
+  font-size: 15vw;
   font-family: 'Checker';
 	position: fixed;
 	z-index: 2;
@@ -75,16 +75,16 @@ a{
 .teaser{
   font-family: 'NHaasGroteskDSPro-55Rg';
   width: 100%;
-  font-size: 30pt;
+  font-size: 3vw;
   color: white;
 }
 .banner {
-	position: fixed;
-	bottom: 0;
+	position: absolute;
+	bottom: 0px;
+  height: 3.2vw;
 	width: 100%;
-  height: 45px;
 	font-family: 'NHaasGroteskDSPro-55Rg';
-	font-size: 30pt;
+	font-size: 3vw;
 	color: white;
 }
 
