@@ -52,18 +52,18 @@ html, body{
   margin-right: auto; 
   font-size: 130pt;
   font-family: 'Checker';
-	position: absolute;
+	position: fixed;
 	top: 38%;
-	bottom: 50%;
 	z-index: 2;
 }
 
 .subtitle{
   font-family:'NHaasGroteskDSPro-55Rg';
-  top: 56%;
   font-size: 18pt;
   text-align: center;
   width: 100vw;
+  position: fixed;
+  top: 58%
 }
 
 a{
