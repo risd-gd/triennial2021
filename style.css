@@ -99,9 +99,10 @@ a{
 }
   
 .box {
-  border: 180px solid black;
-  height: 390px;
-  width: 390px;
+  opacity: 1;
+  border: 200px solid rgb(178, 191, 200);
+  height: 400px;
+  width: 400px;
   position: absolute;
   filter: blur(45px);
   -webkit-filter: blur(45px);
