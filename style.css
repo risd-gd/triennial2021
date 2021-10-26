@@ -58,6 +58,14 @@ html, body{
 	z-index: 2;
 }
 
+.subtitle{
+  font-family:'NHaasGroteskDSPro-55Rg';
+  top: 56%;
+  font-size: 18pt;
+  text-align: center;
+  width: 100vw;
+}
+
 a{
   text-decoration: none;
   color: black;
