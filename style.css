@@ -98,9 +98,9 @@ a{
 }
   
 .box {
-  opacity: 1;
+  opacity: 0.9;
   border: 20vw solid #b7ceda;
-  box-shadow: inset #E0E5E9 0 0 0 50px;
+  box-shadow: inset #E0E5E9 0 0 0 10vw;
   height: 50vw;
   width: 53vw;
   position: absolute;
@@ -114,15 +114,15 @@ a{
 @keyframes animated-border {
   0% {
     border-color: #B1BFC8;;
-    box-shadow: inset #E0E5E9 0 0 0 50px;
+    box-shadow: inset #E0E5E9 0 0 0 10vw;
   }
   50% {
     border-color: #E0E5E9;;
-    box-shadow:inset #B1BFC8 0 0 0 50px;
+    box-shadow:inset #B1BFC8 0 0 0 10vw;
   }
   100% {
     border-color: #B1BFC8;;
-    box-shadow:inset #E0E5E9 0 0 0 50px;
+    box-shadow:inset #E0E5E9 0 0 0 10vw;
   }
 }
 
