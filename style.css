@@ -748,12 +748,20 @@ p {
 
 @media screen and (min-width: 600px) {
   #textchecker {
-    font-size: 34px;
+    font-size: 34pt;
+  }
+  span{
+    font-size: 36pt;
+    line-height: 80%;
   }
 }
 
 @media screen and (max-width: 600px) {
   #textchecker {
-    font-size: 50px;
+    font-size: 40pt;
+  }
+  span{
+    font-size: 42pt;
+    line-height: 80%;
   }
 }
