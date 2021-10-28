@@ -74,9 +74,9 @@ setInterval(function changeClass(){
 
 
 
-      constrain = 1200
+      constrain = 12000
     } else {
-      constrain = 2000;
+      constrain = 20000;
     };
     // console.log(constrain + 'and' + window.innerWidth);
   }, 1000);
@@ -90,8 +90,8 @@ setInterval(function changeClass(){
     let calcY = (x - box.x - (box.width / 2)) / (constrain * 0.8);
     
     return "perspective(100px) "
-      + "   rotateX("+ calcX*15 +"deg) "
-      + "   rotateY("+ calcY*15 +"deg) ";
+      + "   rotateX("+ calcX*9 +"deg) "
+      + "   rotateY("+ calcY*9 +"deg) ";
   };
 
   function transformElement(el, xyEl) {
