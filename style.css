@@ -53,6 +53,7 @@ span{
 
 .svg {
   width: 3500px;
+  position: absolute;
   height: auto;
   display: block;
   margin-left: auto;
