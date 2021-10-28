@@ -830,7 +830,46 @@
   visibility: visible;
   opacity: 1;
 }
+#room1:hover .info {
+  z-index: 4;
+  visibility: visible;
+  opacity: 1;
+}
 
+
+#room1:hover {
+  z-index: 4;
+}
+#room2:hover .info {
+  z-index: 4;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#room2:hover {
+  z-index: 4;
+}
+#room3:hover .info {
+  z-index: 4;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#room3:hover {
+  z-index: 4;
+}
+#room4:hover .info {
+  z-index: 4;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#room4:hover {
+  z-index: 4;
+}
 
 #art1:hover {
   z-index: 2;

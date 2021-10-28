@@ -27,22 +27,22 @@ function shuffle(){
   
   x = random(100, w-400);
   y = random(0, window.innerHeight);
-  room1.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;");
+  room1.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;" + "width:" + "180px;" );
   var room2 = document.getElementById("room2");
   
   x = random(100, w-400);
   y = random(0, window.innerHeight);
-  room2.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;");
+  room2.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;" + "width:" + "180px;");
   var room3 = document.getElementById("room3");
 
   x = random(100, w-400);
   y = random(0, window.innerHeight);
-  room3.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;");
+  room3.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;"+ "width:" + "180px;");
   var room4 = document.getElementById("room4");
   
   x = random(100, w-400);
   y = random(0, window.innerHeight);
-  room4.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;");
+  room4.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;" + "width:" + "180px;");
 
 for (var i = 1; i <= 157; i += 1) {
   var position = document.getElementById("art"+i);
