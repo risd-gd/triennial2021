@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Activation</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/doc4ike.css" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      div {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      #statement {
+        position: relative;
+        z-index: 1;
+        font-size: 80pt;
+        line-height: 105%;
+        padding: 3%;
+      }
+
+      #shuffle {
+        z-index: 3;
+        background: #dcff00;
+        width: 100px;
+        height: 100px;
+        color: #aaaaa9;
+        font-size: 18pt;
+        line-height: 100px;
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .info {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #000;
+        /* transition effect. not necessary */
+        transition: opacity 0.5s, visibility 0.5s;
+      }
+
+      p {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
+      }
+
+      .artist {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .title {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .medium {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        
+        font-size: 11pt;
+      }
+
+      .description {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 11pt;
+      }
+
+      /* #### Mobile Phones Portrait #### */
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
+        #statement {
+          font-size: 36pt;
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
+          word-wrap: break-word;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="statement">
+      <a href="gallery.html"
+        ><img src="portal.png" style="width: 130px; float: right" /></a
+      >Activation—work highlighting the range of voices that speak to individual experiences, identities, cultures, and the role of activism.
+    </div>
+    <div id="shuffle" onclick="shuffle()">resize</div>
+    <div id="art65">
+      <a href="https://www.shaniabass.com/" target="_blank"><img id="pic65" src="activation/AbassShani_ModernMedicine_400.png" /></a>
+      <p>
+        <span class="artist">Shani Abass </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Modern Medicine </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Modern Medicine' is a series of brand collateral for both Knoll's
+          Workplace Research Library and their whitepaper ‘Modern Medicine,’
+          which discusses novel approaches to healthcare and clinical
+          environments. The collection includes a dynamic logo, a series of
+          icons, showroom mockups, and an app containing interactive
+          infographics.
+        </span>
+      </p>
+    </div>
+    <div id="art66">
+      <img id="pic66" src="activation/AgarwalMalvika_Fluent_400.png" />
+      <p>
+        <span class="artist">Malvika Agarwal </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Fluent </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >The magazine aims to explore cultural hybridity through the
+          experiences of artists with immigrant backgrounds. Its intent is to
+          capture inclusive Design Thinking that is directly influenced by
+          navigating two or more cultures. It looks at how cultural
+          intermingling creates subsets of mainstream culture, and how these
+          subsets might replace the ones that hold position now in the
+          future.</span
+        >
+      </p>
+    </div>
+    <div id="art67">
+      <a href="https://www.instagram.com/tomtbj"><img id="pic67" src="activation/BojunTan_LookingAtYou_400.png" /></a>
+      <p>
+        <span class="artist">Bojun Tan </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Looking At You </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Set of two posters for an opera. The poster engages the topic of
+          surveillance by personifying the iconic surveillance cams as subjects
+          looking at the viewer.
+        </span>
+      </p>
+    </div>
+    <div id="art68">
+      <a href="https://www.instagram.com/annier.art.design"><img id="pic68" src="activation/DingSiwu_HowToBeAGoodEgg_400.png" /></a>
+      <p>
+        <span class="artist">Siwu Ding (Annie) </span>
+        <br />
+        2023 ILLU + GD
+        <br />
+        <span class="title">How To Be A Good Egg<br />03/18/2021</span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A dictionary that explores the nuances of the Chinese language and
+          the humor of translations.
+        </span>
+      </p>
+    </div>
+    <div id="art69">
+      <a href="https://www.instagram.com/annier.art.design"><img id="pic69" src="activation/DingSiwu_MadeInChinaEmbroidery_400.jpg" /></a>
+      <p>
+        <span class="artist">Siwu Ding (Annie) </span>
+        <br />
+        2023 ILLU + GD
+        <br />
+        <span class="title">Made In China<br />04/17/2021</span>
+        <br />
+        <br />
+        <span class="medium">Mixed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A branding project that recreates the connotation of the phrase “made
+          in China.” It is a project that speaks to my own cultural identity as
+          a Chinese international student in the US.
+        </span>
+      </p>
+    </div>
+    <div id="art70">
+      <a href="https://utkandora.com" target="_blank"><img id="pic70" src="activation/DoraOnculUtkan_DS3Map_400.jpg" /></a>
+      <p>
+        <span class="artist">Utkan Dora Öncül </span><br />
+        2022 GD
+        <br />
+        <span class="title">More, More & More Chocolate</span>
+        <br />
+        <br />
+        <span class="medium">Publication</span>
+        <br />
+        <br />
+        <span class="description"
+          >This publication is a reaction to the absurd scale of American
+          supermarkets and a reflection upon the ecstatic yet loud atmosphere
+          one gets while walking in supermarket. Supermarket Magazine criticizes
+          the idea of excess by fully embodying it.
+        </span>
+      </p>
+    </div>
+    <div id="art71">
+      <a href="https://utkandora.com" target="_blank"><img
+        id="pic71"
+        src="activation/DoraOnculUtkan_MoreMore_MoreChocolate_400.png"
+      /></a>
+      <p>
+        <span class="artist">Utkan Dora Öncül </span>
+        <br />
+        2022 GD
+        <span class="title">More, More & More Chocolate </span>
+        <br />
+        <br />
+        <span class="medium">Printed Model Installation, Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >This publication is a reaction to the absurd scale of American
+          supermarkets and a reflection upon the ecstatic yet loud atmosphere
+          one gets while walking in supermarket. Supermarket Magazine criticizes
+          the idea of excess by fully embodying it.
+        </span>
+      </p>
+    </div>
+    <div id="art72">
+      <a href="https://www.xioespana.com/"><img id="pic72" src="activation/EspañaXiomara_Latinalore_400.jpg" /></a>
+      <p>
+        <span class="artist">Xiomara España </span>
+        <br />
+        2020 GD
+        <br />
+        <span class="title">Latinalore 2019 </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Latinalore is a zine that delves into my experience as a Latina
+          growing up in Los Angeles. My work is a culmination of tools that I
+          wish had existed to guide me through my early teen years when I was
+          most vulnerable and starting to discover my Latinahood. There aren’t
+          too many Latina designers, artists, or even famous figures in the
+          mainstream so the works I make serve as a Latinx life raft if you
+          will, a supplementary source.
+        </span>
+      </p>
+    </div>
+    <div id="art73">
+      <a href="https://patrickfarrell.xyz/"><img id="pic73" src="activation/FarrellPatrick_LandmarkPoster_400.png" /></a>
+      <p>
+        <span class="artist">Patrick Farrell </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title"
+          >Emory Douglas: Black Panther Graphics (Landmark Poster)
+        </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A poster on the work and career of Emory Douglas (Landmark Poster
+          project for History of Graphic Design), particularly his work
+          designing for the Black Panther Party. The poster catalogs Douglas‘
+          monumental work for the Black Panthers and its tremendous effect on
+          both political design and American politics in general.
+        </span>
+      </p>
+    </div>
+    <div id="art74">
+      <a href="http://instagram.com/adiefein"><img
+        id="pic74"
+        src="activation/FeinAdam_PoliticsOfNonRepresentation_400.png"
+      /></a>
+      <p>
+        <span class="artist">Adam Fein </span>
+        <br />
+        2022 GD MFA
+        <br />
+        <span class="title">Politics of Non-Representation, 5/2021 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The Politics of Non-Representation is a two-sided broadsheet poster
+          that imagines blank spaces within graphic design as—not empty
+          but—vitally alive portals through which marginalized persons can
+          disrupt, annotate, or trouble dominant logics. The work includes an
+          essay contrasting postcolonial thinker Gayatri Spivak, critical
+          designer Jan Van Toorn, and Modernist designers. And the poster
+          explores two visual ways of marking blank-ness: the intentionally
+          blank page, refigured as a space reserved for future marginal speech;
+          and the anti-collage, a layered dis-assemblage of existing visual
+          material that evokes absence.
+        </span>
+      </p>
+    </div>
+    <div id="art75">
+      <a href="http://instagram.com/adiefein"><img id="pic75" src="activation/FeinAdam_TimesNeutralRoman_400.png" /></a>
+      <p>
+        <span class="artist">Adam Fein </span>
+        <br />
+        2022 GD MFA
+        <br />
+        <span class="title">Times Neutral Roman </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Times Neutral Roman (TNR) is an experiment in refusing gendered
+          language. Whenever a word or adjective phrase that references a
+          particular sex or social gender is written, the typeface will
+          automatically substitutes an unspecified marker (an X’d rectangle).
+          The marker is a small gap in language—a portal—that makes the writer
+          aware of the use of gendered language, which may be composed
+          instinctively, without reflective deliberation.
+        </span>
+      </p>
+    </div>
+    <div id="art76">
+      <img id="pic76" src="activation/ForoughAbadian_Untitled_400.jpg" />
+      <p>
+        <span class="artist">Forough Abadian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">The Afghanistan's Refugee Crisis </span>
+        <br />
+        <br />
+        <span class="medium">Printed Shipping Label Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >It is estimated that a half-million Afghans may seek to leave their
+          country by the end of 2021. Nations have responded differently to the
+          call for help, from a conservative stance to more welcoming ones. The
+          luggage tag shows the journey of Afghans to permanent or temporary
+          resettlements while many are still waiting for an escape route behind
+          closed borders.
+        </span>
+      </p>
+    </div>
+    <div id="art77">
+      <a href="https://monetsage.cargo.site/"><img
+        id="pic77"
+        src="activation/FukawaMonet_TimetoGoChokeSomeTurtles_400.png"
+      /></a>
+      <p>
+        <span class="artist">Monet Fukawa </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Time to go choke some turtles! </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >A video that shows the dangers of releasing balloons into the sky.
+        </span>
+      </p>
+    </div>
+    <div id="art78">
+      <a href="http://ingridgomez.com"><img id="pic78" src="activation/GomezIngrid_PainandPride_400.png" /></a>
+      <p>
+        <span class="artist">Ingrid Gomez </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Pain and Pride </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This book discusses the topic of racial injustice in America,
+          specifically against Latinos, as well as questioning what it means to
+          be Latino. This piece navigates the duality of both my American and
+          Latin American culture, causing both pain and pride. Each side
+          represents itself in its own way, while still working together to tell
+          a unified story.
+        </span>
+      </p>
+    </div>
+    <div id="art79">
+      <a href="http://anmolgrao.com"><img id="pic79" src="activation/GovindaRaoAnmol_AJourney_400.png" /></a>
+      <p>
+        <span class="artist">Anmol Govinda Rao </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">A Journey </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >This project visualizes a journey - a journey of growth and
+          understanding, of perspective over one's life, of regaining trust and
+          starting a new day. Experiences, molded by colors, transitioning
+          between states. ’A Journey‘ will hopefully be a reminder that
+          regardless of how deep the void is, inner strength can, and will one
+          day get us out of it. Keep fighting against the harsh winds. Keep
+          climbing the endless and overbearing walls. Keep rising above the
+          mountain ranges and realize this — no dark spot can ever be
+          significant enough to throw darkness over day.
+        </span>
+      </p>
+    </div>
+    <div id="art80">
+      <a href="https://guozengqi.com/"><img
+        id="pic80"
+        src="activation/GuoZengqi_WhatIsItLikeToBeAFiber_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Zengqi Guo </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">What Is It Like to Be a Fiber </span>
+        <br />
+        <br />
+        <span class="medium">Acrylic Plastic, Steel Rod Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >I chose a piece of paper as the object of observation. After rational
+          and emotional dissection, deconstruction and reorganization. I reduced
+          my observations to an accordion book that should have been made out of
+          paper. When you are interacting with this book, you are experiencing
+          what is it like to be a fiber and how does it feel like to be torn
+          apart.
+        </span>
+      </p>
+    </div>
+    <div id="art81">
+      <img id="pic81" src="activation/HuangAnita_robocalypse_400.png" />
+      <p>
+        <span class="artist">Anita Huang </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">“Robocalypse” 2021 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A typography-based printed poster incorporating multiple voices and
+          layers that also functions as a book sleeve. The modular type is
+          created upon on the concept of multiplicity by chimamanda ngozi
+          adichie in the danger of a single story
+        </span>
+      </p>
+    </div>
+    <div id="art82">
+      <a href="https://www.instagram.com/samaaaaaaya"><img
+        id="pic82"
+        src="activation/JayamahaSamaaya_transitionascurrency_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Samaaya Jayamaha </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Transition as Currency, November 2020 </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Created in collaboration with Gregory Shark, advised by Abraham
+          Adams. Collection of writing, photos and illustrations: stories of
+          ambition, change, growing up poor, overcoming, generosity and
+          gratitude.
+        </span>
+      </p>
+    </div>
+    <div id="art83">
+      <a href="https://www.instagram.com/samaaaaaaya"><img id="pic83" src="activation/JayamahaSamaaya_rickytick_400.png" /></a>
+      <p>
+        <span class="artist">Samaaya Jayamaha</span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Rickytick</span>
+        <br />
+        <br />
+        <span class="medium"></span>
+        <br />
+        <br />
+        <span class="description"></span>
+      </p>
+    </div>
+    <div id="art84">
+      <img id="pic84" src="activation/JingyuFeng_JinganTemple_400.jpg" />
+      <p>
+        <span class="artist">Jingyu Feng </span>
+        <br />
+        2023 GD + Print
+        <br />
+        <span class="title">Jing‘an Temple </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >This is a book that attributed to Jing’an Temple in Shanghai. It is a
+          translation of the personal relationship with this temple, one that is
+          intimate yet physically unreachable.
+        </span>
+      </p>
+    </div>
+    <div id="art85">
+      <img id="pic85" src="activation/JungYuJung_HiddenStoriesBehind_400.png" />
+      <p>
+        <span class="artist">Yu Jung Jung </span>
+        <br />2023 GD
+        <br />
+        <span class="title">Hidden Stories Behind </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >I was recently interested in photo journalism which has controversial
+          photos. It was interesting to see different opinions based on people's
+          cultural background and circumstances. This project has a top layer
+          that hides the hidden stories which can be often dismissed, and the
+          inside poster reveals the real stories.
+        </span>
+      </p>
+    </div>
+    <div id="art86">
+      <a href="https://www.instagram.com/juqiwen/"><img id="pic86" src="activation/JuQiwen_StopAsianHate_400.png" /></a>
+      <p>
+        <span class="artist">Qiwen Ju </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Stop Asian Hate Typographic Poster </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media, Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >This poster was created in the spring of 2021. Because of the
+          emergence of COVID, the world is shrouded in negative emotions. The
+          irresponsible words of politicians affect social networks, leading to
+          more and more violent incidents, especially attacks against Asians.
+          The original intention of this poster is not only to oppose the
+          attacks on Asians but also to try to put together a society that has
+          long been torn apart.
+        </span>
+      </p>
+    </div>
+    <div id="art87">
+      <a href="http://www.miokosaka.com"><img id="pic87" src="activation/KosakaMio_のコピー_400.jpg" /></a>
+      <p>
+        <span class="artist">Mio Kosaka </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Woman in Japan </span>
+        <br />
+        <br />
+        <span class="medium">Mixed Media Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >“Woman in Japan” is an installation piece made of small gimmicks,
+          objects and displays that picture how I see Japan as a Japanese woman,
+          and how Japan sees me as a woman. Viewers are able to interact with
+          the piece.
+        </span>
+      </p>
+    </div>
+    <div id="art88">
+      <a href="https://www.instagram.com/nick.k.larson"><img
+        id="pic88"
+        src="activation/LarsonNick_admanadmanadmanadmanadmanadmanadman_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Nick Larson </span>
+        <br />
+        2022 GD MFA
+        <br />
+        <span class="title">admanadmanadmanadmanadmanadmanadman </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A large self portrait composed of a grid of QR codes leading to
+          google searches for my targeted ad interests.
+        </span>
+      </p>
+    </div>
+    <div id="art89">
+      <a href="https://alejandromolestina.net"><img id="pic89" src="activation/MolestinaAlejandro_DesireLines_400.gif" /></a>
+      <p>
+        <span class="artist">Alejandro Molestina </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Desire Lines, Zine, 5/01/2021 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Zine exploring Queer & Feminist Theory as it relates to Design.
+        </span>
+      </p>
+    </div>
+    <div id="art90">
+      <img id="pic90" src="activation/MuhaddisaAli_BOL_400.png" />
+      <p>
+        <span class="artist">Muhaddisa Ali </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Bol Billboard Design </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >this piece is a design for a billboard meant to encourage women in
+          Pakistan to speak up for themselves.
+        </span>
+      </p>
+    </div>
+    <div id="art91">
+      <img
+        id="pic91"
+        src="activation/MurakamiEthan_CrossingLinesConstructingHome_400.png"
+      />
+      <p>
+        <span class="artist">Ethan Kiyoshi Murakami </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Crossing Lines, Constructing Home (2019) </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >An imagined identity for the Harvard Art Museum‘s show, Crossing
+          Lines, Constructing Home: Displacement and Belonging in Contemporary
+          Art, which ran from September 6, 2019 to January 5, 2020.
+        </span>
+      </p>
+    </div>
+    <div id="art92">
+      <img id="pic92" src="activation/MurakamiEthan_IFoundMyselfina_400.png" />
+      <p>
+        <span class="artist">Ethan Kiyoshi Murakami </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">I Found Myself in a __________ (2021) </span>
+        <br />
+        <br />
+        <span class="medium">Video, Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The culmination of my Degree Project, I Found Myself in a __________
+          explores the coded structures of social spaces, using the sites of the
+          grocery store and the hardware stores as sites of inquiry. Within my
+          work, these sites are used as ways to reflect on different aspects of
+          my identity, the feelings of being “othered”, and my desires to
+          belong.
+        </span>
+      </p>
+    </div>
+    <div id="art93">
+      <img id="pic93" src="activation/NandaNishta_SpeakEnglish_400.png" />
+      <p>
+        <span class="artist">Nishtha Nanda </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Speak english only </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >It‘s a typographic animation focusing on linguistic profiling in the
+          US and how the failure to recognize a foreign accent is a societal
+          flaw. I worked with the idea of distortions and fluidity to convey
+          this process of blurred translations.
+        </span>
+      </p>
+    </div>
+    <div id="art94">
+      <a href="https://qingyi.info"><img
+        id="pic94"
+        src="activation/ParkCatherine_ReconciliationScroll_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Catherine Park </span>
+        <br />
+        2021 ID+GD
+        <br />
+        <span class="title"
+          >The Reconciliation Between the All-American and the Asian-American
+        </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >What does it mean to be an All-American when you’re a child of
+          diaspora? What is our relationship with a culture that is supposedly
+          ours? How do we reconcile the difference between what America tells us
+          we should be vs.our own internal cultural conflict?
+        </span>
+      </p>
+    </div>
+    <div id="art95">
+      <a href ="https://www.rhymeswithmaroon.com/" target="_blank"><img
+        id="pic95"
+        src="activation/VarunMehta_DontTellMeHowToSayMyName_400.png"
+      /></a>
+      <p>
+        <span class="artist">Varun Mehta </span>
+        <br />2022 GD + ID
+
+        <br />
+        <span class="title">Don't Tell Me How To Say My Name </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >This project is centered around the experience of being an
+          Indian-American immigrant, specifically living in the middle ground
+          between those two separate cultures. To Americans, I am the Indian and
+          to Indians, due to my accent, my mannerisms, my upbringing, I am the
+          American. As such, I’ve faced friction from both these cultural halves
+          throughout my life. Here, I explore the pronunciation of my name,
+          Varun.
+        </span>
+      </p>
+    </div>
+    <div id="art96">
+      <a href="https://www.instagram.com/cobaltshrike/"><img id="pic96" src="activation/WangShuixin_WomensPlight_400.png" /></a>
+      <p>
+        <span class="artist">Shuixin Wang </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Women‘s Plight, 10/27/2020</span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This series of posters share one theme—plights women around the world
+          have met, including abuse, oppression, and even murder. I‘d like to
+          show the injustice directly, pushing the audience to face these
+          terrible situations and call for solutions and equal rights. The
+          posters were designed for events posters in DS1.
+        </span>
+      </p>
+    </div>
+    <div id="art97">
+      <a href="https://www.instagram.com/bluer.sunset/"><img id="pic97" src="activation/WangTianqi_AttentionWater_400.png" /></a>
+      <p>
+        <span class="artist">Tianqi Wang </span>
+        <br />2022 GD
+
+        <br />
+        <span class="title">Attention: Water! </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >An infographic poster about the water scarcity problem
+        </span>
+      </p>
+    </div>
+    <div id="art98">
+      <a href="https://www.instagram.com/vanillascentedstopbath"><img
+        id="pic98"
+        src="activation/WarshawMadeline_InterviewEditorial_400.png"
+      /></a>
+      <p>
+        <span class="artist">Madeline Warshaw </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Voices Carry Interview Zine </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >I interviewed graphic designer Na Kim, who designs book covers and
+          illustrates freelance. I asked her about her work ethics, and how she
+          gets certain voices across and heard in her work. I designed the zine
+          with playful colors as her work showcases just that, and annotated on
+          the body copy to make the zine even more personable.
+        </span>
+      </p>
+    </div>
+    <div id="art99">
+      <a href="https://hopewisor.cargo.site"><img id="pic99" src="activation/WisorHope_XXProject_400.png" /></a>
+      <p>
+        <span class="artist">Hope Wisor </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">XX: Text Me When You Get Home, 04/21/21 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Branding project for Mukul Chakravarthi’s Type II class. Created a
+          fictional campaign based on the #TextMeWhenYouGetHome movement.
+          Designed a typographic system that was applied to different forms: an
+          event invitation, an event poster, stickers, name tags, etc.
+        </span>
+      </p>
+    </div>
+    <div id="art100">
+      <a href="https://amandayang.design/"><img
+        id="pic100"
+        src="activation/YangAmanda_NothingOutsideOfTheText_400.png"
+      /></a>
+      <p>
+        <span class="artist">Amanda Yang </span>
+        <br />
+        2020 GD
+        <br />
+        <span class="title">Nothing Outside of the Text </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Nothing Outside of the Text is a collection of writing and design
+          projects that aims to inspire reflection upon how language shapes our
+          inherent biases.
+        </span>
+      </p>
+    </div>
+    <div id="art101">
+      <a href="http://yaseminsarihan.com"><img id="pic101" src="activation/YaseminSarihan_EthicalLeaking_400.png" /></a>
+      <p>
+        <span class="artist">Yasemin Sarihan </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">“Ethical” Leaking </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A collection of images taken of my neighbors over quarantine,
+          questioning the “ethics” of surveillance.
+        </span>
+      </p>
+    </div>
+    <div id="art102">
+      <a href="https://ninajunyuchi.com/"><img id="pic102" src="activation/YuchiNina_Fan_400.png" /></a>
+      <p>
+        <span class="artist">Nina Jun Yuchi </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Untitled </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Fans are commonly used to simply fan off heat but also act as props
+          especially in East Asian performances, sometimes as extensions of
+          one’s arm in a dance or a mask to obscure one‘s identity. In
+          reflecting upon these acts, I used the fan as a form of publication,
+          printing lines from Hyejin Shim's article “questions on (the limits &
+          effects of) (asian american) allyship” on each fold of the fan.
+        </span>
+      </p>
+    </div>
+    <div id="art153" class="activation">
+      <a href="https://www.instagram.com/a.koto/"><img id="pic153" src="activation/JadaAkoto_Potomac.png" /></a>
+      <p>
+        <span class="artist">Jada Akoto </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Potomac </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >This video is an exploration in researching the archival histories of
+          Black women, specifically in reality television. The quotes pulled
+          from the show Real Housewives of Potomac discuss ideas of perception,
+          respectability politics, and class.
+        </span>
+      </p>
+    </div>
+    <div id="art154" class="activation">
+      <a href="https://ninajunyuchi.com/"><img id="pic154" src="activation/NinaYuchi_OurWonderful.png" /></a>
+      <p>
+        <span class="artist">Nina Jun Yuchi </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Our Wonderful and Grotesque World </span>
+        <br />
+        <br />
+        <a href="https://xtxa.github.io/wonderful-world/files/index.html"
+          target="_blank"><span class="medium">Website </span></a>
+        <br />
+        <br />
+        <span class="description"
+          >
+          This website provides a non-linear reading of my dream journal entries
+          and invites viewers to enter a new page that progresses through an
+          essay I wrote about Asian American political identity, dreams, and
+          resistance.
+        </span>
+      </p>
+    </div>
+    <div id="art155" class="activation">
+      <a href="https://www.instagram.com/annier.art.design"><img id="pic155" src="activation/SiwuDing_Motypeface.png" /></a>
+      <p>
+        <span class="artist">Siwu Ding (Annie) </span>
+        <br />
+        2023 ILLU + GD
+        <br />
+        <span class="title">Mo Typeface</span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A modular typeface that explore the subtle beauty of ink, inspired by
+          Chinese ink wash painting and calligraphy.
+        </span>
+      </p>
+    </div>
+    <div id="art156" class="activation">
+      <a href="https://denatale.cargo.site/"><img id="pic156" src="placeholder.jpg" /></a>
+      <p>
+        <span class="artist">William DeNatale </span>
+        <br />2021 GD
+        <br />
+        <span class="title">It’s the Real Thing </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >It‘s the Real Thing is a visual exploration of our fetishization of
+          nostalgia. We covet the “good old days” as some golden standard of
+          living, but in doing so we separate those times from the greater
+          contexts they existed within. War & violence, prejudice, inequality —
+          all these things are lost within a fever dream of happy childhoods and
+          good times with friends.
+        </span>
+      </p>
+    </div>
+  </body>
+  <script src="activation.js" type="text/javascript"></script>
+</html>

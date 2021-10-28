@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Connection</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/doc4ike.css" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      div {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      #statement {
+        position: relative;
+        z-index: 1;
+        font-size: 80pt;
+        line-height: 105%;
+        padding: 3%;
+      }
+
+      #shuffle {
+        z-index: 3;
+        background: #dcff00;
+        width: 100px;
+        height: 100px;
+        color: #aaaaa9;
+        font-size: 18pt;
+        line-height: 100px;
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .info {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #000;
+        /* transition effect. not necessary */
+        transition: opacity 0.5s, visibility 0.5s;
+      }
+
+      p {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
+      }
+
+      .artist {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .title {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .medium {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        
+        font-size: 11pt;
+      }
+
+      .description {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 11pt;
+      }
+
+      /* #### Mobile Phones Portrait #### */
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
+        #statement {
+          font-size: 36pt;
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
+          word-wrap: break-word;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="statement">
+      <a href="gallery.html"
+        ><img src="portal.png" style="width: 130px; float: right" /></a
+      >Connection—work bridging thresholds between design, the world, communication, silence, and the everything else that makes us artists and designers. 
+    </div>
+    <div id="shuffle" onclick="shuffle()">resize</div>
+    <div id="art103">
+      <a href="http://www.gabrielabascal.com"><img id="pic103" src="connection/AbascalGabriel_IAndLoveYou_400.png" /></a>
+      <p>
+        <span class="artist">Gabriel Abascal </span>
+        <br />
+        2020 GD
+        <br />
+        <span class="title">I And Love And You </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >I And Love And You is a book I made as the culmination of my degree
+          project in May of 2020.
+        </span>
+      </p>
+    </div>
+    <div id="art104">
+      <a href="https://www.instagram.com/alexis__eli/?hl=en"><img id="pic104" src="connection/Alexis_Seams_400.jpg" /></a>
+      <p>
+        <span class="artist">Alexis Elaine Reid </span>
+        <br />2021 GD
+
+        <br />
+        <span class="title">Physical Poster Series </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >These poster have been created in an analog way and then digitally
+          manipulated.
+        </span>
+      </p>
+    </div>
+    <div id="art105">
+      <img
+        id="pic105"
+        src="connection/ChaoWendy_KnollResearchLibraryConceptPosters_400.jpg"
+      />
+      <p>
+        <span class="artist">Wendy Chao </span>
+        <br />2022 GD
+
+        <br />
+        <span class="title">Knoll Research Library Concept Posters + Kit </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Posters and Design Kit for the Knoll Workplace Research Library.
+          Icons and style reflect the content and research of Knoll’s essay “10
+          Ergonomic Tips For A Healthier Workspace”
+        </span>
+      </p>
+    </div>
+    <div id="art106">
+      <a href="http://lydiachodoshdesign.com"><img id="pic106" src="connection/ChodoshLydia_i,and_400.png" /></a>
+      <p>
+        <span class="artist">Lydia Chodosh </span>
+        <br />
+        2024 GD MFA
+        <br />
+        <span class="title">i, and </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Created in Fall 2021 during the first year of grad study, this large
+          format square print explores the elemental qualities of typography,
+          how meaning diverges and gets redacted through repetition.
+        </span>
+      </p>
+    </div>
+    <div id="art107">
+      <a href="https://irischo.cargo.site"><img id="pic107" src="connection/ChoIris_P_400.jpg" /></a>
+      <p>
+        <span class="artist">Iris Cho </span>
+        <br />2023 GD
+
+        <br />
+        <span class="title">Off the Page, 12/01/2020 </span>
+        <br />
+        <br />
+        <span class="medium">Blank CD Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >Creating the letterform ‘P’ off the page and into the real
+          3-dimensional world. I reused empty disks to create the letter in a
+          tech way.The ‘P’ although a 3D sculpture was created using materials
+          that are normally used to create productions on screen.
+        </span>
+      </p>
+    </div>
+    <div id="art108">
+      <a href="https://www.instagram.com/lbfdraws/"><img id="pic108" src="placeholder.jpg" /></a>
+      <p>
+        <span class="artist">Leslie Berumen Flores </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Type Around Us: Glow </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Pictures of glowing and neon type found around Providence were
+          collaged onto a poster, creating a composition that creates the
+          illusion of having walked through a portal into the world of
+          typography.
+        </span>
+      </p>
+    </div>
+    <div id="art109">
+      <a href="https://sharlenedeng.com/"><img id="pic109" src="connection/DengSharlene_DojaCatPoster_400.jpg" /></a>
+      <p>
+        <span class="artist">Sharlene Deng </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Doja Cat Poster </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Created for Type 3, this is a fictional black and white event poster
+          for Doja Cat. Experimenting with typographic form, composition and
+          movement.
+        </span>
+      </p>
+    </div>
+    <div id="art110">
+      <a href="https://www.gabrieldrozdov.com/"><img id="pic110" src="connection/DrozdovGabriel_Event_1500.png" /></a>
+      <p>
+        <span class="artist">Gabriel Drozdov </span>
+        <br />
+        2024 GD MFA
+        <br />
+        <span class="title">“Event”, 10/19/2021 </span>
+        <br />
+        <br />
+        <span class="medium">Experiential Work Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >“Event” is the initiation of (or portal into) an event—the spectator,
+          reading this prompt, brings the event into existence. The spectator’s
+          subjective experience gives the event meaning, shaped by the prompts’
+          coexistence as both unique and reproduced objects.
+        </span>
+      </p>
+    </div>
+    <div id="art111">
+      <a href="http://anmolgrao.com"><img
+        id="pic111"
+        src="connection/GovindaRaoAnmol_BiodiversityInfographic_400.png"
+      /></a>
+      <p>
+        <span class="artist">Anmol Govinda Rao </span>
+        <br />2023 GD
+
+        <br />
+        <span class="title">Biodiversity Infographic </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This infographic focuses on statistical data about global diversity
+          with additional information gathered from various diversity databases,
+          highlighting how little we know about life on Earth and how much
+          diversity has been lost.
+        </span>
+      </p>
+    </div>
+    <div id="art112">
+      <a href="https://www.instagram.com/ki.ra.rose/" target="_blank"><img id="pic112" src="connection/HeldKira_Confetti_400.png" /></a>
+      <p>
+        <span class="artist">Kira Held </span>
+        <br />2024 GD
+
+        <br />
+        <span class="title">Confetti </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Compositions inspired by ink and confetti
+        </span>
+      </p>
+    </div>
+    <div id="art113">
+      <a href="https://christinekoh.cargo.site/"><img id="pic113" src="connection/KohChristine_BackToAnalog_400.jpg" /></a>
+      <p>
+        <span class="artist">Christine Koh </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">“Back to Analog”, 4/14/21 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >An interview with Hiromu Oka, a motion graphic designer based in
+          Tokyo, talking about the importance of working analog (RISO) to inform
+          his digital processes. The final interview is translated into a 4 page
+          newspaper publication. This relates to the theme of portals because it
+          is connecting the ways in which conversations are shared remotely in
+          different parts of the world, and rich, valuable insight is soaked in,
+          opening the possibilities of approaching design differently.
+        </span>
+      </p>
+    </div>
+    <div id="art114">
+      <a href="https://natekrohn.com/"><img id="pic114" src="connection/KrohnNate_OrangeFences_400.jpg" /></a>
+      <p>
+        <span class="artist">Nathaniel Ladd Krohn </span>
+        <br />2023 GD
+
+        <br />
+        <span class="title">Orange Fences </span>
+        <br />
+        <br />
+        <span class="medium">Polymer Steel Plate Etching Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >The tension and relationship between two orange fences sitting in
+          tandem. Confrontation illustrated on even ground. Polymer steel plate
+          etching.
+        </span>
+      </p>
+    </div>
+    <div id="art115">
+      <img id="pic115" src="connection/LarkinEthan_MotionPoster_400.png" />
+      <p>
+        <span class="artist">missing information</span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title"></span>
+        <br />
+        <br />
+        <span class="medium"></span>
+        <br />
+        <br />
+        <span class="description"></span>
+      </p>
+    </div>
+    <div id="art116">
+      <a href="http://brysonlee.info"><img id="pic116" src="connection/LeeBryson_GardenLabryrinth_400.png" /></a>
+      <p>
+        <span class="artist">Bryson Lee </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Garden Labyrinth </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This poster is an archive of flower breeds. With vine-like framework
+          and windows that showcase flowers as statues, this poster is meant to
+          imitate a garden hedge maze.
+        </span>
+      </p>
+    </div>
+    <div id="art117">
+      <a href="https://www.instagram.com/hwan_gd"><img id="pic117" src="connection/LeeHwan_ILikePosters_400.jpg" /></a>
+      <p>
+        <span class="artist">Hwan Lee </span>
+        <br />2023 GD
+
+        <br />
+        <span class="title">Untitled </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A collection of images having to do with grids found in both natural
+          & manmade forms.
+        </span>
+      </p>
+    </div>
+    <div id="art118">
+      <a href="https://www.instagram.com/rosieposielemonsquozie"><img id="pic118" src="connection/LeeHyelim_DuBoisinfographics_400.png" /></a>
+      <p>
+        <span class="artist">Hyelim Rose Lee </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">W.E.B. Du Bois Infographics Poster </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This poster is dedicated to W.E.B. Du Bois’s data visualization
+          infographics.
+        </span>
+      </p>
+    </div>
+    <div id="art119">
+      <a href="http://www.sunho-lee.com"><img id="pic119" src="connection/LeeSunHo_Sparkle_400.png" /></a>
+      <p>
+        <span class="artist">Sun Ho Lee </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Sparkle </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Visual experimentation of the word “sparkle.”
+        </span>
+      </p>
+    </div>
+    <div id="art120">
+      <a href="https://ylim03.myportfolio.com"><img id="pic120" src="connection/LimYoujin_NYsubway_400.jpg" /></a>
+      <p>
+        <span class="artist">Youjin Lim (Amy) </span>
+        <br />2023 GD
+
+        <br />
+        <span class="title">NY subway </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A poster that describes the NY Subway Map with joyfulness by freely
+          placing subway lines over each other.
+        </span>
+      </p>
+    </div>
+    <div id="art121">
+      <a href="http://manmeetsodhi.com"><img id="pic121" src="connection/ManmeetSodhi_APlanetedSeed_400.jpg" /></a>
+      <p>
+        <span class="artist">Manmeet Sodhi </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">A Planted Seed </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A conversation about code and art between father and son.
+        </span>
+      </p>
+    </div>
+    <div id="art122">
+      <a href="https://instagram.com/fruitcakedaily"><img id="pic122" src="connection/MillerRuby_UselessOrgans_400.png" /></a>
+      <p>
+        <span class="artist">Ruby Miller </span>
+        <br />2022 GD
+
+        <br />
+        <span class="title">Scaffolding 4: Useless Organs </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Useless Organs is the 4th edition of the Scaffolding Journal by Ruby
+          Miller and Idene A.
+        </span>
+      </p>
+    </div>
+    <div id="art123">
+      <a href="https://instagram.com/fruitcakedaily"><img id="pic123" src="connection/MillterRuby_diptych_400.jpg" /></a>
+      <p>
+        <span class="artist">Ruby Miller </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Night Vision Diptych </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Pair of 4x6 inch prints on photo paper.
+        </span>
+      </p>
+    </div>
+    <div id="art124">
+      <img id="pic124" src="connection/MuhaddisaAli_12collages_400.jpg" />
+      <p>
+        <span class="artist">Muhaddisa Ali </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Compositional Studies</span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Compositional Collages made from scans of sketches
+        </span>
+      </p>
+    </div>
+    <div id="art125">
+      <a href="https://www.instagram.com/nick.k.larson"><img id="pic125" src="connection/NickLarson_Idi-O-Matic_400.png" /></a>
+      <p>
+        <span class="artist">Nick Larson </span>
+        <br />
+        2022 GD MFA
+        <br />
+        <span class="title">Idi-O-Matic </span>
+        <br />
+        <br />
+        <a href="//idi-o-matic.glitch.me/" target="_blank"><span class="medium">Website </span></a>
+        <br />
+        <br />
+        <span class="description"
+          >
+          website that generates absurd combinations of english language
+          idiomatic expressions.
+        </span>
+      </p>
+    </div>
+    <div id="art126">
+      <a href="https://emmanoel.cargo.site/"><img id="pic126" src="connection/NoelEmma_WhatsRISDWearin_400.jpg" /></a>
+      <p>
+        <span class="artist">Emma E Noel </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">What’s RISD Wearing? </span>
+        <br />
+        <br />
+        <span class="medium">Publication</span>
+        <br />
+        <br />
+        <span class="description"
+          >What’s RISD Wearing? is a compilation zine of observed 2021 RISD
+          student fashion sense. The zine also serves as an accompanying tool to
+          the article I wrote, featured in The Glob RISD Newspaper (2021). This
+          limited edition zine was printed on the risograph and spiral bound
+          with a clear coil. The zine features a fold out riso copy of the
+          newspaper article at the back.</span
+        >
+      </p>
+    </div>
+    <div id="art127">
+      <a href="http://www.erinisla.com"><img id="pic127" src="connection/RomanErin_TheCollection_1500.png" /></a>
+      <p>
+        <span class="artist">Erin Isla Roman </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Sept-Oct 2021 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >To kick off the year, DSIII students created posters (based on the
+          idea of taxonomy) that were transformed into public installation
+          pieces. This work is particularly meaningful to me because it involves
+          the community, and not just because of the interactive collage aspect.
+          From ordering custom fluorescent chalk markers from Micheal B. at the
+          RISD Store to talking to Peter at the 3D store about cut orders for
+          acrylic sheets to learning how to vinyl cut from Ed and John at the
+          type shop, this piece would not have been possible without the help of
+          the RISD community.
+        </span>
+      </p>
+    </div>
+    <div id="art128">
+      <a href="https://adeleroncey.cargo.site"><img id="pic128" src="connection/RonceyAdele_Creativite_400.png" /></a>
+      <p>
+        <span class="artist">Adèle Roncey </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Créativité With Julia Parris </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Spread based on an interview with photographer, art director, and
+          founder of Analog is Heavy, Julia Parris. The interview touches base
+          on creativity and the practice of making.
+        </span>
+      </p>
+    </div>
+    <div id="art129">
+      <a href="https://adeleroncey.cargo.site"><img id="pic129" src="connection/RonceyAdele_Inks_1500.jpg" /></a>
+      <p>
+        <span class="artist">Adèle Roncey </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Words in Inks, 05/2021 </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Artist book exploring Language and text emphasizing texture and
+          patterns through different printing techniques. Language takes form
+          with poetry and found cited text adding multiple layers of voice.
+          Cotton and black denim fiber based handmade paper and several printing
+          processes including inkjet, screen print, letterpress and sewing.
+        </span>
+      </p>
+    </div>
+    <div id="art130">
+      <a href="https://www.instagram.com/frogyolk"><img id="pic130" src="connection/RyanEleanor_Nook_400.jpg" /></a>
+      <p>
+        <span class="artist">missing info</span>
+        <br />
+        202X GD
+        <br />
+        <span class="title"></span>
+        <br />
+        <br />
+        <span class="medium"></span>
+        <br />
+        <br />
+        <span class="description"></span>
+      </p>
+    </div>
+    <div id="art131">
+      <img id="pic131" src="connection/SarkissianAlex_Reframing_400.png" />
+      <p>
+        <span class="artist">Alex Sarkissian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Reframing the Poster: The Poster </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Inspired by a class the designer has not been able to reframe his
+          schedule to fit.
+        </span>
+      </p>
+    </div>
+    <div id="art132">
+      <a href="http://averyjuneshaw.com"><img id="pic132" src="connection/ShawAvery_DrivingInProvidence_400.jpg" /></a>
+      <p>
+        <span class="artist">Avery Shaw </span>
+        <br />2022 GD
+
+        <br />
+        <span class="title">Driving In Providence </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Driving In Providence is a letter-pressed poster series. Using wooden
+          type and a two large linoleum cuts, the poster depicts the frustration
+          and rage of a Providence driver. Each line of type is like a brick in
+          the face. Made on a Vandercook letterpress for repetition and
+          consistency, each one includes a unique ink treatment, done by a
+          hand-roller prior to each print.
+        </span>
+      </p>
+    </div>
+    <div id="art133">
+      <a href="https://www.instagram.com/archived.mj"><img id="pic133" src="connection/SongJieun_MyCollection_400.jpg" /></a>
+      <p>
+        <span class="artist">Jieun Song (MJ) </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">My Collection </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >This collection of images captures a range of natural items that
+          people collect, study, or worship. It explores parallels between
+          Romantic and Transcendental appreciation for nature and those of more
+          institutional religious rituals. The cold epistemology of modern
+          scientific viewpoints adds extra dimension to the collection, as these
+          objects exist at intersections between spirituality and science,
+          pulling us both toward nature and separating us from it.
+        </span>
+      </p>
+    </div>
+    <div id="art134">
+      <a href="https://utkandora.com" target="_blank"><img id="pic134" src="connection/UtkanDoraOncul_DSC09666_400.jpg" /></a>
+      <p>
+        <span class="artist">Utkan Dora Öncül </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Spark Newsletter </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A monthly newsletter of three interviews with creatives.
+          Alternatively, a sweet resource for design students. Flip and use as a
+          poster after reading.
+        </span>
+      </p>
+    </div>
+    <div id="art135">
+      <a href="https://utkandora.com" target="_blank"><img id="pic135" src="connection/UtkanDoraOncul_DSC09794_400.jpg" /></a>
+      <p>
+        <span class="artist">Utkan Dora Öncül </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Biophilic Prints </span>
+        <br />
+        <br />
+        <span class="medium">Silkscreen Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A set of 5 layer silkscreen prints diving into the humans
+          relationship with nature with use of text annotation and photographic
+          symbolism.
+        </span>
+      </p>
+    </div>
+    <div id="art136">
+      <a href="https://www.instagram.com/bluer.sunset"><img id="pic136" src="connection/WangTianqi_Insomnia_400.png" /></a>
+      <p>
+        <span class="artist">Tianqi Wang </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Insomnia Diary </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A double-sided illustration zine about the insomnia experience.
+          Printed in riso.
+        </span>
+      </p>
+    </div>
+    <div id="art137">
+      <a href="https://www.instagram.com/pi.xien/"><img id="pic137" src="connection/XieIris_digsouv_400.png" /></a>
+      <p>
+        <span class="artist">Iris Xie </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Waking Up </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This digital souvenir immerses you in how it feels to wake up in the
+          morning as someone who is not a morning person. Zoom in for jokes!
+        </span>
+      </p>
+    </div>
+    <div id="art138">
+      <a href="https://www.instagram.com/yangruih/"><img
+        id="pic138"
+        src="connection/YangRainRuihua_TravelingGrooves_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Rain Ruihua Yang </span>
+        <br />
+        2022 GD + INTAR
+        <br />
+        <span class="title"> The “Traveling Grooves” Zine </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Traveling Grooves: An experimental Zine created and fabricated from a
+          private collection of vinyl and a dozen set of typefaces.
+        </span>
+      </p>
+    </div>
+    <div id="art139">
+      <a href="http://jeffyaodesign.com"><img id="pic139" src="connection/YaoJeff_ForminMotion_400.png" /></a>
+      <p>
+        <span class="artist">Jeff Yao </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Form in Motion </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >A short, upbeat motion piece with animated cylinders made of
+          typography. For a fictional show about Swiss design.
+        </span>
+      </p>
+    </div>
+    <div id="art140">
+      <a href="http://jeffyaodesign.com"><img
+        id="pic140"
+        src="connection/YaoJeff_StillLifeandSelfPortrait_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Jeff Yao </span>
+        <br />2022 GD
+
+        <br />
+        <span class="title">Still Life and Self Portrait </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A set of two darkroom prints of food arrangements, one at the Met and
+          one at Chengdu Taste, a local Chinese restaurant.
+        </span>
+      </p>
+    </div>
+    <div id="art141">
+      <a href="https://ninajunyuchi.com/"><img id="pic141" src="connection/YuchiNina_HappyBirthday_400.jpg" /></a>
+      <p>
+        <span class="artist">Nina Jun Yuchi </span>
+        <br />2021 GD
+
+        <br />
+        <span class="title">Happy Birthday! </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Happy birthday! This colorful zine goes through the narrative of an
+          absurd dream, folding out into a 10.5"x16.5" poster.
+        </span>
+      </p>
+    </div>
+    <div id="art142">
+      <a href="https://www.instagram.com/sjjjpenguin/"><img id="pic142" src="connection/YunErica_UgliesPosterSeries_400.jpg" /></a>
+      <p>
+        <span class="artist">Erica Yun </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">“Uglies” Poster Series </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The series depicts the dystopian society in the book “Uglies” in
+          which individuals’ body imagery is distorted and transformed by the
+          forced surgeries of the government. The work represents the loss of
+          individuality and freedom, incorporating the photos of disassembled
+          doll bodies.
+        </span>
+      </p>
+    </div>
+    <div id="art157" class="connection">
+      <img id="pic157" src="connection/VohraMehek_LostInTranslation.png" />
+      <p>
+        <span class="artist">Mehek Vohra </span>
+        <br />
+        2024 BRDD GD + Cognitive Neuroscience
+        <br />
+        <span class="title">Lost in Translation</span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Lost in Translation explores the visual interplay between Arabic,
+          English and Hindi. By filtering images of text through the iPhone
+          lens, Google Translate, Photoshop filters, and an OCR system, the
+          meaning of each word is transformed. The final “image,” is a poem in
+          English, sometimes humorous, sometimes incomprehensible, which
+          reflects the abstract nature of translation.
+        </span>
+      </p>
+    </div>
+  </body>
+  <script src="connection.js" type="text/javascript"></script>
+</html>

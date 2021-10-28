@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Speculation</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/doc4ike.css" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      div {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      #statement {
+        position: relative;
+        z-index: 1;
+        font-size: 80pt;
+        line-height: 105%;
+        padding: 3%;
+      }
+
+      #shuffle {
+        z-index: 3;
+        background: #dcff00;
+        width: 100px;
+        height: 100px;
+        color: #aaaaa9;
+        font-size: 18pt;
+        line-height: 100px;
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .info {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #000;
+        /* transition effect. not necessary */
+        transition: opacity 0.5s, visibility 0.5s;
+      }
+
+      p {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
+      }
+
+      .artist {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .title {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .medium {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        
+        font-size: 11pt;
+      }
+
+      .description {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 11pt;
+      }
+
+      /* #### Mobile Phones Portrait #### */
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
+        #statement {
+          font-size: 36pt;
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
+          word-wrap: break-word;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="statement">
+      <a href="gallery.html"
+        ><img src="portal.png" style="width: 130px; float: right" /></a
+      >Speculation—work envisioning new futures (beautiful, terrible, everything in between), informed by the past and present.
+    </div>
+    <div id="shuffle" onclick="shuffle()">resize</div>
+    <div id="art37">
+      <a href="https://www.instagram.com/carrieanchaeeun"><img id="pic37" src="speculation/AnChaeeun_BiomimicryAlphabet_400.png" /></a>
+      <p>
+        <span class="artist">Chaeeun (Carrie) An </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Biomimicry Alphabet </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Biomimicry Alphabet is a poster inspired by microscopic images from
+          the Nature Lab.
+        </span>
+      </p>
+    </div>
+    <div id="art38">
+      <a href="https://sharlenedeng.com/"><img
+        id="pic38"
+        src="speculation/DengSharlene_GroovyCarAnimation_400.png"
+      /></a>
+      <p>
+        <span class="artist">Sharlene Deng </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Groovy Car Animation </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Created for Ed Brown‘s Digital 3D Form Making workshop, I aimed to
+          create a surreal animated car gif in a desert landscape. Experimenting
+          with color, sound and motion.
+        </span>
+      </p>
+    </div>
+    <div id="art39">
+      <a href="https://sharlenedeng.com/"><img id="pic39" src="speculation/DengSharlene_SurrealLandscape_400.jpg" /></a>
+      <p>
+        <span class="artist">Sharlene Deng </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Surreal Landscape Render </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Surreal room render experimenting with materiality in Cinema 4D.
+          Created for Ed Brown‘s Digital 3D Form Making workshop.
+        </span>
+      </p>
+    </div>
+    <div id="art40">
+      <a href="https://monetsage.cargo.site/"><img
+        id="pic40"
+        src="speculation/FukawaMonet_BreedingShapesAlphabet_400.png"
+      /></a>
+      <p>
+        <span class="artist">Monet Fukawa </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Breeding Shapes Alphabet </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The alphabet was made from 24 vector shapes inspired by microscopic
+          images at the RISD Nature Lab.
+        </span>
+      </p>
+    </div>
+    <div id="art41">
+      <a href="https://www.lian.land/"><img
+        id="pic41"
+        src="speculation/FumertonLiuLian_OrangePeelGlyphs_400.png"
+      /></a>
+      <p>
+        <span class="artist">Lian Fumerton-Liu </span><br />
+        2023 GD MFA
+        <br />
+        <span class="title">Orange Peel Glyphs </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >An incubator for programmatic thinking in Kelsey Elder’s Variability
+          class. “Prototype a program which can create glyphs and/or write a
+          visual language.” The result: a visual system and instructions for
+          making your own orange peel glyphs, dependent on variable factors.
+        </span>
+      </p>
+    </div>
+    <div id="art42">
+      <a href="https://www.instagram.com/mizuki_hanada"><img id="pic42" src="speculation/HanadaMizuki_FestivalShinkai_400.png" /></a>
+      <p>
+        <span class="artist">Mizuki Hanada </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Festival Shinkai </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >A kinetic poster made to promote a Japanese music festival happening
+          in the depths of the ocean of Suruga Bay.
+        </span>
+      </p>
+    </div>
+    <div id="art43">
+      <img id="pic43" src="speculation/HanEJoon_ElliesPostcard_400.png" />
+      <p>
+        <span class="artist">E Joon (Ellie) Han </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Send your heart </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >As technology has advanced, people have become more accustomed to
+          texting each other. My work has been also done by using a computer,
+          which is adobe illustrator and photosho. However, added my touch to it
+          by drawing a tiger. How about writing a handwritten letter to a person
+          you miss? Sometimes some analog sensibility is must needed in a
+          relationship.
+        </span>
+      </p>
+    </div>
+    <div id="art44">
+      <a href="https://www.instagram.com/joyceho.x/" target="_blank"><img id="pic44" src="speculation/HoJoyce_poeticsofInterruption_400.png" /></a>
+      <p>
+        <span class="artist">Joyce Ho </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Poetics of Interruption </span>
+        <br />
+        <br />
+        <span class="medium">Website </span>
+        <br />
+        <br />
+        <span class="description"
+          >With every story told comes with stories untold. What if a narrative
+          is constantly interrupted in prevention of suturing the audience into
+          a linear mode of thinking? Generating texts from first person
+          narratives by the fiction character Genly Ai in Ursula K. Le Guin’s
+          The Left Hand of Darkness, the reading site attempts to break into the
+          ‘variances’ of how a story can be comprehended.
+        </span>
+      </p>
+    </div>
+    <div id="art45">
+      <a href="https://www.instagram.com/jin_grim_/"><img id="pic45" src="speculation/KimJin_TheGardenParty_400.png" /></a>
+      <p>
+        <span class="artist">Jin Kim </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">The Garden Party </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This poster was created when the COVID-19 pandemic took the world
+          into chaos. “The Garden Party” aims to create an event that encourages
+          residents to see the community in a vibrant future
+          post-pandemic.</span
+        >
+      </p>
+    </div>
+    <div id="art46">
+      <a href="https://www.instagram.com/kyoung_hoon_kim_/"><img
+        id="pic46"
+        src="speculation/KimKyoungHoon_EverytimeWeDealWithEnemyWeCreateTwoMore_400.png"
+      /></a>
+      <p>
+        <span class="artist">Kyoung Hoon Kim </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title"
+          >Everytime We Deal With Enemy, We Create Two More
+        </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >I am a person who is very enthusiastic toward video games, where I
+          have been inspired by it to create this work. In those worlds, when
+          you deal with an enemy, two or more gets to you to grab a chance to
+          win, where you have to be very calculative to win the game. This
+          kinetic typography is a portal to my experience of those games.
+        </span>
+      </p>
+    </div>
+    <div id="art47">
+      <img
+        id="pic47"
+        src="speculation/LarkinEthan_GenerativeAlphabet_400.png"
+      />
+      <p>
+        <span class="artist">Ethan Larkin </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Generative Alphabets </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"></span>
+      </p>
+    </div>
+    <div id="art48">
+      <a href="https://www.xubai.design/"><img id="pic48" src="speculation/LiXubai_AdditiveType_400.png" /></a>
+      <p>
+        <span class="artist">Xubai Li </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Additiven Type </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Human-Aided Manufacture (HAM) is a twist of the normal Computer-Aided
+          Manufacture (CAM) process. In this Additive Type, the human actions
+          are following a strict coordinate system, just like how computers
+          following its order. The project consists of a documentation video, an
+          instruction manual for future replication, and several italic font
+          experiments.
+        </span>
+      </p>
+    </div>
+    <div id="art49">
+      <a href="http://louisrakovich.com"><img id="pic49" src="speculation/LouisRakovich_Breathing_400.png" /></a>
+      <p>
+        <span class="artist">Louis Rakovich </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Breathing Exercise </span>
+        <br />
+        <br />
+        <a href="https://preview.p5js.org/lrakovich/present/U3X1KkPgS" target="_blank"><span class="medium">Website </span></a>
+        <br />
+        <br />
+        <span class="description"
+          >An interactive generative design experience that allows the user to
+          guide a responsive, organically-moving wormhole. The result is calming
+          yet slightly unnerving. Move your mouse around the screen in small or
+          large, slow or fast motions, and see what happens.
+        </span>
+      </p>
+    </div>
+    <div id="art50">
+      <a href ="https://www.rhymeswithmaroon.com/" target="_blank"><img id="pic50" src="speculation/MehtaVarun_AvaniPoster_400.png" /></a>
+      <p>
+        <span class="artist">Varun Mehta </span>
+        <br />
+        2022 GD + ID
+        <br />
+        <span class="artist">Avantika Velho</span>
+        <br />
+        2022 ID
+        <br />
+        <span class="title">Avani </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >This is an urban systems design project proposing an interconnected
+          system of multilevel stability, which would be implemented into
+          coastal cities in our near future. Using a public parking garage as a
+          case study of the greater changes that would occur in this proposal,
+          we outline the ways our phased approach would benefit natural
+          ecologies, human social systems, and basic infrastructure in the city.
+          Our works were inspired in large part by the way energy transfers in
+          nature, such as with phenotypic plasticity in ant colonies or
+          altruistic alarm calling among deer and monkeys.
+        </span>
+      </p>
+    </div>
+    <div id="art51">
+      <a href ="https://www.rhymeswithmaroon.com/" target="_blank"><img id="pic51" src="speculation/MehtaVarun_TheIsolationHelm_400.jpg" /></a>
+      <p>
+        <span class="artist">Varun Mehta </span>
+        <br />
+        2022 GD + ID
+        <br />
+        <span class="title">The Isolation Helm </span>
+        <br />
+        <br />
+        <span class="medium">3D Printed Installation, Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This helmet is an analysis of social isolation, a growing phenomenon
+          within dense urban settings, and the way our usage of modern
+          technology has exacerbated its rise. Crucially, it is not the
+          technology that is inherently the problem; it is the context and
+          manner of our usage.
+        </span>
+      </p>
+    </div>
+    <div id="art52">
+      <a href="https://instagram.com/fruitcakedaily"><img id="pic52" src="speculation/MillerRuby_BeachHouse_400.png" /></a>
+      <p>
+        <span class="artist">Ruby Miller </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Beach House </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Beach House is a 360 video featuring clips the James Bond film
+          franchise. The virtual space includes scenes from the films that take
+          place on the ocean or the shore. It is a spatialized supercut.
+        </span>
+      </p>
+    </div>
+    <div id="art53">
+      <a href="https://2jessieboo.wixsite.com/jperkinsportfolio"><img id="pic53" src="speculation/PerkinsJessica_OneWarmDay_1500.png" /></a>
+      <p>
+        <span class="artist">Jessica Perkins </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">One Warm Day </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media, Video </span>
+        <br />
+        <br />
+        <span class="description">
+          One Warm Day is a poster for a theoretical concert featuring music
+          artists Fleet Foxes, Fleetwood Mac, Amigo the Devil, and Orville Peck.
+          These artists are united by their folk and country influences, so the
+          accompanying animation was made by projecting a slow-moving
+          composition onto moving water, and recording the resulting reflection.
+          This allowed for really organic movement, creating a soft place for
+          viewers to land and reinforcing the idea of one warm day (from Fleet
+          Foxes‘ song Featherweight.)
+        </span>
+      </p>
+    </div>
+    <div id="art54">
+      <img
+        id="pic54"
+        src="speculation/SarkissianAlex_HowToStayinTouch_400.png"
+      />
+      <p>
+        <span class="artist">Alex Sarkissian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">How To Stay In Touch </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >A video game teaching anyone how to stay in touch with friends and
+          family while avoiding a pandemic. Socially distance to avoid losing
+          points.
+        </span>
+      </p>
+    </div>
+    <div id="art55">
+      <img
+        id="pic55"
+        src="speculation/ShyngyssovaTomiris_EdiblePoster_400.jpg"
+      />
+      <p>
+        <span class="artist">Tomiris Shyngyssova </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Edible Poster </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The Poster mimics blotter acid (LSD) but instead of dwelling on the
+          psychedelic implications of such an object, this edible poster aims to
+          question the ways in which we conform to the collective ritual of
+          consuming information - figuratively and literally in this case. I'll
+          make a specific portal-theme design for this edible blotter poster,
+          which can urge us to think of where we want to go on the ‘trip’
+          through this portal - to which preferred future? What does it look
+          like? What is RISD like in that future?
+        </span>
+      </p>
+    </div>
+    <div id="art56">
+      <a href="https://www.instagram.com/tomtbj"><img id="pic56" src="speculation/TanBojun_SheisFree_400.png" /></a>
+      <p>
+        <span class="artist">Bojun Tan </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">She Is Free </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >This gif represents my visual interpretation of the Beatles‘ song
+          “She’s Leaving Home.” It envisions the sense of loss and freedom in a
+          futuristic context.
+        </span>
+      </p>
+    </div>
+    <div id="art57">
+      <a href="https://utkandora.com" target="_blank"><img
+        id="pic57"
+        src="speculation/UtkanDoraOncul_HowToExerciseinaWorldwidePandemic_1500.png"
+      /></a>
+      <p>
+        <span class="artist">Utkan Dora Öncül </span><br />
+        2022 GD
+        <br />
+        <span class="title">How to Exercise in a Global Pandemic </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >One may need to get a little inventive to exercise during the
+          pandemic.
+        </span>
+      </p>
+    </div>
+    <div id="art58">
+      <a href="https://www.instagram.com/bluer.sunset"><img
+        id="pic58"
+        src="speculation/WangTianqi_WhatWeSeeWhenWeRead_400.png"
+      /></a>
+      <p>
+        <span class="artist">Tianqi Wang </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">What We See When We Read </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >This project is a redesign of the book What We See When We Read
+          written by Peter Mendelsund. Experimenting with type, color, and
+          composition, this book reimagines the reading experience, letting the
+          typography express the contents.
+        </span>
+      </p>
+    </div>
+    <div id="art59">
+      <a href="https://hopewisor.cargo.site"><img
+        id="pic59"
+        src="speculation/WisorHope_PodfaceTypeComposition_400.gif"
+      /></a>
+      <p>
+        <span class="artist">Hope Wisor </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Podface </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Podface is a modular alphabet developed in Mukul Chakravarti’s Type
+          II class. The system started from geometric plants forms that
+          developed into a spherical typeface. Podface has a retrofuturistic
+          look with a space-age feel.
+        </span>
+      </p>
+    </div>
+    <div id="art60">
+      <a href="https://qingyi.info"><img id="pic60" src="speculation/WuCatherine_同志廟會_400.png" /></a>
+      <p>
+        <span class="artist">Catherine Wu (Qing Yi) </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Queer Temple Fair </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Queer Temple Fair is an imaginary event branded to celebrate the
+          legalization of same sex marriage in Taiwan. This Asian interpretation
+          challenges the western customs of celebrating equality. Asia’s own
+          efforts in fighting for the right to love should be honored in it's
+          own unique way, thus a Temple Fair.
+        </span>
+      </p>
+    </div>
+    <div id="art61">
+      <a href="https://www.instagram.com/pi.xien/"><img id="pic61" src="speculation/XieIris_Predestination_400.png" /></a>
+      <p>
+        <span class="artist">Iris Xie </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Predestination </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Predestination is the divine foreordaining of all that will happen.
+          Your destiny is out of your hands, we all follow arbitrary signs from
+          the universe along the confusing paths of life to try and make sense
+          of it all. This is futile.
+        </span>
+      </p>
+    </div>
+    <div id="art62">
+      <a href="https://www.instagram.com/yangruih/"><img id="pic62" src="speculation/YangRuihua_KWRL_400.jpg" /></a>
+      <p>
+        <span class="artist">Rain Ruihua Yang </span>
+        <br />
+        2022 GD + INTAR
+        <br />
+        <span class="title"
+          >Knoll Workplace Research Library Poster Series
+        </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >KWRL: A system of posters created from 3D modeling and Renders, to
+          invoke a visual language of research and innovation.
+        </span>
+      </p>
+    </div>
+    <div id="art63">
+      <img id="pic63" src="speculation/YeeNicole_MFS2_400.jpg" />
+      <p>
+        <span class="artist">Nicole Yee </span><br />2022 ID<br /><span
+          class="artist"
+          >Frida Haggstrom</span
+        ><br />Exchange GD<br /><span class="artist">Eva Yao </span><br />2021
+        ID + SC
+        <br />
+        <span class="title">Museum of Future Senses </span>
+        <br />
+        <br />
+        <span class="medium">Gallery Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >This work was made in Agi Haines’ Prototyping Bodies and Anastasiia
+          Raina's Design in the Posthuman Age courses. In this proposed future,
+          the ozone layer has been completely destroyed. To survive, people have
+          relocated to live in underground caves. Now they need to navigate the
+          world with a heightened sense of touch, since all of their other
+          senses have been muddled.</span
+        >
+      </p>
+    </div>
+    <div id="art64">
+      <a href="https://ninajunyuchi.com/"><img id="pic64" src="speculation/YuchiNina_CIB_400.jpg" /></a>
+      <p>
+        <span class="artist">Nina Jun Yuchi </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Community in Bloom </span>
+        <br />
+        <br />
+        <span class="medium"
+          >Website, Printed Media, Quilted Paper Installation
+        </span>
+        <br />
+        <br />
+        <span class="description"
+          >Community in Bloom is a workshop organized and hosted by Stephanie Wu
+          and Nina Jun Yuchi in response and critique to the design industry and
+          its relationship with politics. Design is not an isolated process but
+          it’s often viewed as such. Acknowledging the labor and love that is
+          required from all of our peers, we hope to impart the participants
+          with a more holistic view of what design and community can be. This
+          workshop invites young emerging/student designers but is open to all
+          cultural workers.
+        </span>
+      </p>
+    </div>
+    <div id="art147" class="speculation">
+      <a href="https://www.instagram.com/carrieanchaeeun"><img id="pic147" src="speculation/ChaeeunAn_ColorBreathing.png" /></a>
+      <p>
+        <span class="artist">Chaeeun (Carrie) An </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Color Breathing </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Color Breathing is a series of interactive posters that visualizes
+          the relationship of complementary colors for meditation.
+        </span>
+      </p>
+    </div>
+    <div id="art148" class="speculation">
+      <img id="pic148" src="placeholder.jpg" />
+      <p>
+        <span class="artist">Ashley Yae </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Breeding Shapes: Alphabets </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A set of alphabets were inspired and created by the images from
+          confocal and SEM microscopes and forms present in Nature.
+        </span>
+      </p>
+    </div>
+    <div id="art149" class="speculation">
+      <a href="https://irischo.cargo.site"><img id="pic149" src="speculation/ChoIris_MeltingPoster.png" /></a>
+      <p>
+        <span class="artist">Iris Cho </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Melting </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The ‘Melting’ typeface includes figures carefully yet abstractly
+          created by using water and soap on acetate paper under different
+          lighting situations.</span
+        >
+      </p>
+    </div>
+    <div id="art150" class="speculation">
+      <a href="http://louisrakovich.com"><img id="pic150" src="speculation/LouisRakovich_HeavenlySounds.png" /></a>
+      <p>
+        <span class="artist">Louis Rakovich </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Heavenly Sounds </span>
+        <br />
+        <br />
+        <a href="https://preview.p5js.org/lrakovich/present/U3X1KkPgSA" target="_blank"
+            ><span class="medium">Website </span></a>
+        <br />
+        <br />
+        <span class="description"
+          >
+          web experience that serves as a catalog of strange, disturbingly
+          beautiful sounds from outer space, recorded by NASA. The site’s
+          interface is inspired by radars and radio dials, and the process of
+          search and discovery.
+        </span>
+      </p>
+    </div>
+    <div id="art151" class="speculation">
+      <a href="https://guozengqi.com/"><img id="pic151" src="placeholder.jpg" /></a>
+      <p>
+        <span class="artist">Zengqi Guo </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">MiXeR </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Uppercase and lowercase letters have different volumes in typography.
+          In this alphabet, Mixer aims to get rid of the hierarchy of uppercase
+          and lowercase letters, setting them at the same volume. It respects
+          the structural differences and inequalities while pursuing an
+          inner-connected complex assemblage. The new closed relationship, the
+          intertwined structure that comes with this middle case here is a
+          visual manifesto of our posthuman future.
+        </span>
+      </p>
+    </div>
+    <div id="art152" class="speculation">
+      <a href="http://zoepulley.com"><img id="pic152" src="speculation/ZoePulley_Blockys.png" /></a>
+      <p>
+        <span class="artist">Zoë Pulley </span>
+        <br />
+        2023 GD MFA
+        <br />
+        <span class="title">Blockys </span>
+        <br />
+        <br />
+        <span class="medium">Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Part four of a tool-making exploration utilizing a 3D printer.
+        </span>
+      </p>
+    </div>
+  </body>
+  <script src="speculation.js" type="text/javascript"></script>
+</html>
