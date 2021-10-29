@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Retrospection</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/doc4ike.css" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      div {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      #statement {
+        position: relative;
+        z-index: 1;
+        font-size: 80pt;
+        line-height: 105%;
+        padding: 3%;
+      }
+
+      #shuffle {
+        z-index: 3;
+        background: #dcff00;
+        width: 100px;
+        height: 100px;
+        color: #aaaaa9;
+        font-size: 18pt;
+        line-height: 100px;
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .info {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #000;
+        /* transition effect. not necessary */
+        transition: opacity 0.5s, visibility 0.5s;
+      }
+
+      p {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
+      }
+
+      .artist {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .title {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .medium {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        
+        font-size: 11pt;
+      }
+
+      .description {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 11pt;
+      }
+
+      /* #### Mobile Phones Portrait #### */
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
+        #statement {
+          font-size: 36pt;
+          -webkit-hyphens: auto;
+          -moz-hyphens: auto;
+          -ms-hyphens: auto;
+          hyphens: auto;
+          word-wrap: break-word;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="statement">
+      <a href="gallery.html"
+        ><img src="portal.png" style="width: 130px; float: right" /></a
+      >Retrospection—work reflecting back on the myriad of change, movements,
+      and events from the past three years.
+    </div>
+    <div id="shuffle" onclick="shuffle()">resize</div>
+    <div id="art1">
+      <a href="https://www.instagram.com/a.koto/"><img id="pic1" src="retrospection/AkotoJada_ButLook_400.jpg" /></a>
+
+      <p>
+        <span class="artist">Jada Akoto</span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">But Look! </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media</span>
+        <br />
+        <br />
+        <span class="description"
+          >This collaged poster is compiled from found images that represent the
+          idea of the <q>American Dream</q>, a now antiquated idea. It
+          illustrates the idea of complacency within progressive movements and
+          questions when can the work be <q>done.</q></span
+        >
+      </p>
+    </div>
+    <div id="art2">
+      <a href="https://808misc.myportfolio.com/" target="_blank"><img id="pic2" src="retrospection/AnanyaScindia_Splash_400.png" /></a>
+      <p>
+        <span class="artist">Ananya Raje Scindia </span><br />
+        2024 GD
+        <br />
+        <span class="title">The Dolly Parton Antibody Extravaganza</span>
+        <br />
+        <br />
+        <span class="medium">Printed Media</span>
+        <br />
+        <br />
+        <span class="description"
+          >Dolly Parton donated $1 million to Vanderbilt University as they
+          worked towards developing the Moderna COVID mRNA Vaccine - therefore
+          Dolly Parton herself created the COVID Vaccine. Inspired by patterned
+          posters of the 1970s, this concert will be a strictly vaccinated
+          celebration of her hard work towards scientific research.</span
+        >
+      </p>
+    </div>
+    <div id="art3">
+      <img id="pic3" src="retrospection/AstlesCameron_NotesonHejira_400.jpg" />
+      <p>
+        <span class="artist">Cameron Astles </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Notes on Hejira</span>
+        <br />
+        <br />
+        <span class="medium">Printed Media, Video</span>
+        <br />
+        <br />
+        <span class="description"
+          >Pulling song lyrics and notes from Hejira, an album gifted to me,
+          Notes on Hejira provides a point of connection through time and space
+          with one of the great unifying forces: music.
+          <q
+            >21, and driving home from school in Willimantic, listening to WILI,
+            and they played, ‘Song for Sharon,’ which hit me like a
+            thunderbolt.</q
+          >
+          These sentiments still ring true nearly 50 years later.
+        </span>
+      </p>
+    </div>
+    <div id="art4">
+      <a href="https://ollantayaa.cargo.site/"><img id="pic4" src="retrospection/AvilaOllantay_MiMadre_400.png" /></a>
+      <p>
+        <span class="artist">Ollantay Avila </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Mi Madre </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Mi Madre is a still life made in the Graphic Design Studio
+          Photography workshop. In the still life, I position objects that my
+          mom has given me such as the stuffed animal, the necklaces, and the
+          vase with other objects I associate with her to evoke a sense of
+          nostalgia.
+        </span>
+      </p>
+    </div>
+    <div id="art5">
+      <a href="https://gdecicco2.wixsite.com/website"><img id="pic5" src="retrospection/DeCiccoGianamarie_Aftermath_400.png" /></a>
+      <p>
+        <span class="artist">Gianamarie DeCicco </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Codependency, 10/6/21 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >These works represent the phases that individuals go through after
+          emotionally losing someone close to them. Together they are a process,
+          while individually they are their own separate feeling.
+        </span>
+      </p>
+    </div>
+    <div id="art6">
+      <a href="http://anmolgrao.com"><img
+        id="pic6"
+        src="retrospection/GovindaRaoAnmol_JosefMüller-Brockmann_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Anmol Govinda Rao </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Josef Müller-Brockmann </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This landmark poster was designed for History of Graphic Design
+          during the Fall semester of 2020. Designed as a tribute to
+          Müller-Brockmann and the Swiss Style, the poster uses a vertical grid
+          system, a deep orange colored title (inspired by the cover of
+          Müller-Brockmann's Grid Systems book) and a neutral grotesk font.
+          Further symbols like the white arrows where distributed across the
+          poster as graphic elements, calling back to Müller-Brockmann’s
+          redesign of the Swiss metro system signage. The poster also includes
+          an essay detailing Müller-Brockmann’s works and his life.
+        </span>
+      </p>
+    </div>
+    <div id="art7">
+      <a href="https://www.instagram.com/rbhlizard56/"><img
+        id="pic7"
+        src="retrospection/HsiaoRyan_timeVibedistimeWellSpentVol1_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Ryan Brandon Hsiao </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">time Vibed is time Well Spent Vol.1 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Poster for a vintage DJ dance set. Typographical elements are based
+          on the idea of time and clocks; the pattern structure is sampled from
+          a sequence of dance moves, just like songs sample other songs. If you
+          vibe to this set, your time will be well spent!
+        </span>
+      </p>
+    </div>
+    <div id="art8">
+      <img id="pic8" src="retrospection/IanKeliher_Atlas_400.png" />
+      <p>
+        <span class="artist">Ian Keliher </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">At—Last: GD MFA Atlas 2021 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >At—Last is a yearly Grad Studio 1 project that explores different
+          interpretations of place, time, and self.
+        </span>
+      </p>
+    </div>
+    <div id="art9">
+      <a href="https://jjjiejian.me/"><img
+        id="pic9"
+        src="retrospection/JianJie_AnIntroToBoys_LoveVisualNovels_400.png"
+      /></a>
+      <p>
+        <span class="artist">Jie Jian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">An Intro to Boy’s Love Visual Novels </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >An introduction to Yaoi galgames through the window of windows XP.
+        </span>
+      </p>
+    </div>
+    <div id="art10">
+      <a href="https://jjjiejian.me/"><img
+        id="pic10"
+        src="retrospection/JianJie_MicrosoftSpiderSolitaire_400.png"
+      /></a>
+      <p>
+        <span class="artist">Jie Jian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Microsoft Spider Solitaire </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A booklet about microsoft spider solitaire through the ligatures of
+          the Lingua typeface by Process Type Foundry.
+        </span>
+      </p>
+    </div>
+    <div id="art11">
+      <a href="https://jjjiejian.me/"><img id="pic11" src="retrospection/JianJie_VitaLemonTea_400.png" /></a>
+      <p>
+        <span class="artist">Jie Jian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Vita Lemon Tea </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description">A nostalgia zine of Vita Lemon Tea</span>
+      </p>
+    </div>
+    <div id="art12">
+      <img id="pic12" src="retrospection/JiYingxi_IndustryPark_400.png" />
+      <p>
+        <span class="artist"
+          >Julie Alter<br />Corinne Ang<br />Labelle Chang<br />Baijun Chen<br />Leo
+          Horton<br />Madi Ko<br />Soleil Singh<br />Amanda Yang<br /> </span
+        >with additional help from Anmol Govinda Rao, Bryson Lee, Alejandro
+        Molestina, Maxton O'Connor, and Marcus Soltzberg.
+        <br />
+        <span class="title">RISD GD 2021 Yearbook </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >The 2021 Rhode Island School of Design Senior Yearbook.
+        </span>
+      </p>
+    </div>
+    <div id="art13">
+      <a href="https://www.instagram.com/janice.work"><img id="pic13" src="retrospection/KhangJanice_HappyPlace_400.jpg" /></a>
+      <p>
+        <span class="artist">Janice Khang </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Happy Place </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >We all strive to be happy, myself included. However, I realized the
+          pursuit of an over-idealized, unattainable version of happiness was
+          detrimental to my own. This portal to a happy place is somewhere
+          people can achieve pure happiness, but it will never exist.
+        </span>
+      </p>
+    </div>
+    <div id="art14">
+      <a href="http://minadesigns.co"><img id="pic14" src="retrospection/KimMina_SewerMuseum_400.jpg" /></a>
+      <p>
+        <span class="artist">Mina Kim </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Transport Accelerated Specimen book </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Transport Accelerated is a font design inspired by Transport, a
+          typeface used for road signs in many countries, mainly in the UK. It
+          is described as a typeface that “performed efficiently for so long
+          that most people are completely unaware.” Transport Accelerated was
+          created with Transport glyphs as animation frames, capturing
+          accelerating motion for each letter.
+        </span>
+      </p>
+    </div>
+    <div id="art15">
+      <a href="https://www.instagram.com/nick.k.larson"><img id="pic15" src="retrospection/LarsonNick_somethingperhaps_400.jpg" /></a>
+      <p>
+        <span class="artist">Nick Larson </span>
+        <br />
+        2022 GD MFA
+        <br />
+        <span class="title">Something, Perhaps</span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A diagrammatic exploration of conspiracy, misinformation, and digital
+          quotidian. The book’s signatures come apart to form a wall sided,
+          double sided tiled poster.
+        </span>
+      </p>
+    </div>
+    <div id="art16">
+      <a href="http://brysonlee.info"><img id="pic16" src="retrospection/LeeBryson_GateSide_400.png" /></a>
+      <p>
+        <span class="artist">Bryson Lee </span>
+        <br />
+        2021 GD
+        <br />
+        <span class="title">Among the Leaves </span>
+        <br />
+        <br />
+        <span class="medium">Chain-link Fence, Paper Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >Among the Leaves is a selection of curated images that explore the
+          intersections between decoration, imitation, and nature. The silver
+          fence and leaves serve as a “poster” form—meant to imitate natural
+          leaves forming around architecture. Among the Leaves is was a part of
+          a long term project that was meant to lure in viewers to explore a
+          collection of images that guide my graphic design and artistic
+          practice. This project is not only a collection, but a self portrait,
+          a “portal” into what inspires me and how I view the phenomenon of
+          imitating nature.
+        </span>
+      </p>
+    </div>
+    <div id="art17">
+      <a href="https://www.instagram.com/rosieposielemonsquozie"><img id="pic17" src="retrospection/LeeHyelim_Dadaland_400.jpg" /></a>
+      <p>
+        <span class="artist">Hyelim Rose Lee </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Dadaland </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Surreal experience recollecting childhood films and memories
+        </span>
+      </p>
+    </div>
+    <div id="art18">
+      <a href="https://ylim03.myportfolio.com"><img id="pic18" src="retrospection/LimYoujin_GoesRound_Round_400.jpg" /></a>
+      <p>
+        <span class="artist">Youjin Lim (Amy) </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Goes Round & Round </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A poster of a collection of lines/templates that we use everyday to
+          keep our life cycle and routine.
+        </span>
+      </p>
+    </div>
+    <div id="art19">
+      <a href="https://ylim03.myportfolio.com"><img
+        id="pic19"
+        src="retrospection/LimYoujin_Goingbacktothe19thcentury_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Youjin Lim (Amy) </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Going back to the 19th Century </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A zine that delivers a message of where I was influenced the most as
+          a designer, which was vintage furniture in the home.
+        </span>
+      </p>
+    </div>
+    <div id="art20">
+      <a href="https://yutongliu.squarespace.com/"><img id="pic20" src="retrospection/LiuYutong_Anthropomorphism_400.png" /></a>
+      <p>
+        <span class="artist">Yutong Liu (Winnie) </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Spirit of objects 09/30/2021 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The two posters are about anthropomorphism and non-anthropomorphism
+          objects. The first one is talking about the reason why people created
+          the concept of anthropomorphism and how people endow spirit on objects
+          by myth, stories, or fears. The second one is a collection of random
+          mundane objects in a dusty shelf.
+        </span>
+      </p>
+    </div>
+    <div id="art21">
+      <img id="pic21" src="retrospection/LonyayMoritz_IndigoBook_400.jpg" />
+      <p>
+        <span class="artist">Moritz Lónyay </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">INDIGO - 05/2021 </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A typographic publication showcasing indigo dye and its impact across
+          cultures throughout history.
+        </span>
+      </p>
+    </div>
+    <div id="art22">
+      <a href="https://mankunguo.com/"><img id="pic22" src="retrospection/MankunGuo_FanTaiSui_400.jpg" /></a>
+      <p>
+        <span class="artist">Mankun Guo </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Fan Tai Sui </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >The project was born from the curiosity of Chinese astrology. It aims
+          to interpret the Fan Tai Sui (Offending the god of Tai Sui) from a
+          modern perspective, escaping from the cultural imposition while
+          inheriting its historical contents. The stylish visual language here
+          becomes the main tool of communicating ancient traditions under the
+          contemporary global context.
+        </span>
+      </p>
+    </div>
+    <div id="art23">
+      <img id="pic23" src="retrospection/MuhaddisaAli_MappingMemory_400.jpg" />
+      <p>
+        <span class="artist">Muhaddisa Ali </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Mapping Memory </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Collage of nostalgic elements from my childhood, specifically focused
+          on the city of Karachi, Pakistan, where my grandparents lived.
+        </span>
+      </p>
+    </div>
+    <div id="art24">
+      <img
+        id="pic24"
+        src="retrospection/NishthaNanda_EmpoweredTimeline_400.png"
+      />
+      <p>
+        <span class="artist">Nishtha Nanda </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">An Empowered Timeline </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >I created a zine which travels through time going through various
+          generations and art styles to reflect that. I focused on the roots
+          behind the feminist centric work in my art and how the role of the
+          women in my life cultivated that.
+        </span>
+      </p>
+    </div>
+    <div id="art25">
+      <a href="https://emmanoel.cargo.site/"><img
+        id="pic25"
+        src="retrospection/NoelEmma_TwoDesignerTimeline_400.png"
+      /></a>
+      <p>
+        <span class="artist">Emma E Noel </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Two Designer Time Line </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >In celebration of the history of graphic design, this accordion book
+          timeline playfully explores the lives and works of influential graphic
+          designers Chip Kidd and David Carson. Color coded, each designer is
+          assigned a defining color, with historical context running between.
+          This book can be flipped open and read page by page as a traditional
+          book, or can be expanded to be read as one continuous timeline.
+        </span>
+      </p>
+    </div>
+    <div id="art26">
+      <a href="https://2jessieboo.wixsite.com/jperkinsportfolio"><img id="pic26" src="retrospection/PerkinsJessica_AfterJudd_400.jpg" /></a>
+      <p>
+        <span class="artist">Jessica Perkins </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">After Judd </span>
+        <br />
+        <br />
+        <span class="medium">Hand-Dyed Fabric Installation </span>
+        <br />
+        <br />
+        <span class="description"
+          >This work is a soft sculpture installation of 5 cubes measuring
+          approximately 6 × 27 × 24, satirizing Donald Judd's Untitled
+          (1969/1982). In contrast to Judd's modernist, mind-over-matter
+          approach, these are hand sewn and hand dyed fabric constructions that
+          can be taken from the wall and used in the home.
+        </span>
+      </p>
+    </div>
+    <div id="art27">
+      <a href="https://2jessieboo.wixsite.com/jperkinsportfolio"><img id="pic27" src="retrospection/PerkinsJessica_SettingType_400.jpg" /></a>
+      <p>
+        <span class="artist">Jessica Perkins </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Setting Type </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >A collection of compositions utilizing influential texts from four
+          different famous type designers: Beatrice Warde, Phil Baines, Bradbury
+          Thompson, and Jan Tschichold. Each set is designed to reflect that
+          designer’s philosophy, comes inside a corresponding envelope.
+        </span>
+      </p>
+    </div>
+    <div id="art28">
+      <a href="https://2jessieboo.wixsite.com/jperkinsportfolio"><img
+        id="pic28"
+        src="retrospection/PerkinsJessica_APlacetoCallHome_400.png"
+      /></a>
+      <p>
+        <span class="artist">Jessica Perkins </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">A Place to Call Home </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A small scale book consisting of Chimamanda Ngozi Adichie’s Ted Talk
+          ‘The Dangers of a Single Story,’ an excerpt of J. R. R. Tolkien’s ‘The
+          Hobbit,‘ and selected poems collected under the theme of Home. This
+          book was set in GT Alpina by Reto Moser, and laser printed on grey
+          construction paper.
+        </span>
+      </p>
+    </div>
+    <div id="art29">
+      <a href="http://www.erinisla.com"><img id="pic29" src="retrospection/RomanErin_TwomblyPoster_400.png" /></a>
+      <p>
+        <span class="artist">Erin Roman </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">Twombly Posts </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This is a poster series I made about typographer and RISD alumna,
+          Carol Twombly. The design of the poster reminds me of the theme of
+          portals because the type was designed to feels like it's transcending
+          through space. I did this to reference how her type design has passed
+          the test of time (so far) and continues to impact the world.
+        </span>
+      </p>
+    </div>
+    <div id="art30">
+      <a href="https://www.instagram.com/frogyolk"><img id="pic30" src="retrospection/RyanEleanor_Doorways_400.jpg" /></a>
+      <p>
+        <span class="artist">Eleanor Ryan </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">“Doorways” 10/4/2021 </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >This interactive poster emerged as a representation of a collection
+          of items, all starting from a green, vintage toy car. The exterior of
+          the poster displays an abstracted exterior landscape. The doors in the
+          houses and cars open to accordion books showing the interior part of
+          the collection that I might find indoors in my home. The text is
+          personally written as a reaction to the collection.
+        </span>
+      </p>
+    </div>
+    <div id="art31">
+      <img id="pic31" src="retrospection/SarkissianAlex_17Hrs_400.jpg" />
+      <p>
+        <span class="artist">Alex Sarkissian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">17 Hours </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >It takes 17 hours to drive from the Emerald City to the Golden State.
+          Inspired by the colors from a move from Seattle, Washington to Los
+          Angeles, CA, this piece included a 17-hour run of a contained
+          JavaScript motion to print and back to digital.
+        </span>
+      </p>
+    </div>
+    <div id="art32">
+      <img
+        id="pic32"
+        src="retrospection/SarkissianAlex_TheDollyPartonAntibody_400.png"
+      />
+      <p>
+        <span class="artist">Alex Sarkissian </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">The Dolly Parton Antibody Extravaganza </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Dolly Parton donated $1 million to Vanderbilt University as they
+          worked towards developing the Moderna COVID mRNA Vaccine - therefore
+          Dolly Parton herself created the COVID Vaccine. Inspired by patterned
+          posters of the 1970s, this concert will be a strictly vaccinated
+          celebration of her hard work towards scientific research.
+        </span>
+      </p>
+    </div>
+    <div id="art33">
+      <a href="https://www.instagram.com/tomtbj"><img id="pic33" src="retrospection/TanBojun_01_400.jpg" /></a>
+      <p>
+        <span class="artist">Bojun Tan </span>
+        <br />
+        2022 GD
+        <br />
+        <span class="title">The Whatever </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >Subversive newspaper publication of entirely negative news in Boston.
+          The Whatever examines major issues of urban life using data and news
+          reports including light pollution, crime, depression, the pandemic and
+          a hotel taking overtime to be built upon an awful old one.
+        </span>
+      </p>
+    </div>
+    <div id="art34">
+      <a href="https://www.instagram.com/pi.xien/"><img id="pic34" src="retrospection/XieIris_Ode_400.png" /></a>
+      <p>
+        <span class="artist">Iris Xie </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Ode </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media, Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Ode is an artists book and game inspired by family photographs and
+          aims to memorialize the past. In an attempt to travel back in time,
+          objects from the photographs are made into miniature sculptures and
+          one plays the game through finding and matching object to picture.
+        </span>
+      </p>
+    </div>
+    <div id="art35">
+      <a href="https://www.instagram.com/yangruih/"><img
+        id="pic35"
+        src="retrospection/YangRainRuihua_RenderingandDesign_400.jpg"
+      /></a>
+      <p>
+        <span class="artist">Rain Ruihua Yang </span>
+        <br />
+        2022 GD + INTAR
+        <br />
+        <span class="title">The Interview: “Rendering and Design” 2021 </span>
+        <br />
+        <br />
+        <span class="medium">Publication</span>
+        <br />
+        <br />
+        <span class="description"
+          >Rendering and Design: Print and typeset of an interview conducted
+          with a professional architectural render artists about the art of 3D
+          modeling, the influence of techonolgy on architecture, and his
+          professional practice and story.
+        </span>
+      </p>
+    </div>
+    <div id="art36">
+      <img id="pic36" src="retrospection/YangSaelin_MomentPoster_400.png" />
+      <p>
+        <span class="artist">Sae Lin Yang </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Movement Of Moments </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media, Video </span>
+        <br />
+        <br />
+        <span class="description"
+          >Life is a series of interconnected moments. We are always looking
+          back, probing the present, and predicting the future. This portal will
+          bring back memories that have been buried in our minds, allowing us to
+          look back and reorganize our lives.
+        </span>
+      </p>
+    </div>
+    <div id="art143" class="retrospection">
+      <img
+        id="pic143"
+        src="retrospection/KimMina_TransportAcceleratedMina_400.jpg"
+      />
+      <p>
+        <span class="artist">Mina Kim </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Transport Accelerated Specimen Book</span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >Transport Accelerated is a font design inspired by Transport, a
+          typeface used for road signs in many countries, mainly in the UK. It
+          is described as a typeface that “performed efficiently for so long
+          that most people are completely unaware.” Transport Accelerated was
+          created with Transport glyphs as animation frames, capturing
+          accelerating motion for each letter.
+        </span>
+      </p>
+    </div>
+    <div id="art144" class="retrospection">
+      <img id="pic144" src="retrospection/MuhaddisaAli_AnOdetoMyself.png" />
+      <p>
+        <span class="artist">Muhaddisa Ali </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">An Ode to Myself </span>
+        <br />
+        <br />
+        <span class="medium">Publication </span>
+        <br />
+        <br />
+        <span class="description"
+          >A book I designed as I adjusted to living in a new country and
+          starting a new life. dealing with unfamiliarity and new anxieties of
+          fitting in and navigating a foreign world.
+        </span>
+      </p>
+    </div>
+    <div id="art145" class="retrospection">
+      <a href="https://www.instagram.com/tubemonster"><img id="pic145" src="placeholder.png" /></a>
+      <p>
+        <span class="artist">Li June Choi </span>
+        <br />
+        2024 GD
+        <br />
+        <span class="title">Blast—Glimpse at Vorticism </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >It is a poster that documents the influences and impacts of the
+          magazine Blast by Wydlem Lewis. One can notice it’s influence on the
+          poster in its straight-cut modern alignment.
+        </span>
+      </p>
+    </div>
+    <div id="art146" class="retrospection">
+      <img id="pic146" src="placeholder.png" />
+      <p>
+        <span class="artist">Shun Huang </span>
+        <br />
+        2023 GD
+        <br />
+        <span class="title">Blast—Glimpse at Vorticism </span>
+        <br />
+        <br />
+        <span class="medium">Printed Media </span>
+        <br />
+        <br />
+        <span class="description"
+          >It is a poster that documents the influences and impacts of the
+          magazine Blast by Wydlem Lewis. One can notice it’s influence on the
+          poster in its straight-cut modern alignment.
+        </span>
+      </p>
+    </div>
+  </body>
+  <script src="retrospection.js" type="text/javascript"></script>
+</html>
