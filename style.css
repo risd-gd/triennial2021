@@ -48,7 +48,7 @@ span{
   font-family: 'NHaasGroteskDSPro-55Rg';
   font-size: 36pt;
   top: 20px;
-  line-height: 80%;
+  /*line-height: 80%;*/
 }
 
 .svg {
@@ -207,6 +207,8 @@ img {
   line-height: 105%;
   padding: 3%;
 }
+
+
 
 #shuffle {
   z-index: 3;
