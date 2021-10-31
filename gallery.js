@@ -47,7 +47,7 @@ function shuffle(){
 for (var i = 1; i <= 157; i += 1) {
   var position = document.getElementById("art"+i);
   x = random(100, w-400);
-  y = random(0, h-800);
+  y = random(0, h-860);
   s = random(170, 200);
   position.setAttribute("style", "left:" + x + "px; " + "top:" + y + "px;" + "width:" + s + "px;");
 }
