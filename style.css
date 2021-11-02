@@ -75,6 +75,7 @@ span{
   z-index: 2;
 }
 
+
 .subtitle{
   font-family:'NHaasGroteskDSPro-55Rg';
   font-size: 18pt;
@@ -88,6 +89,12 @@ a{
   text-decoration: none;
   color: black;
 }
+
+a:hover{
+  text-decoration: none;
+  color: #dcff00 
+}
+
 .teaser{
   font-family: 'NHaasGroteskDSPro-55Rg';
   width: 100%;
